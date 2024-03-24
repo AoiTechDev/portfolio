@@ -7,7 +7,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <main className="w-full max-w-7xl  h-screen mx-auto pt-24 text-white relative overflow-hidden">
+    <main className="w-full max-w-7xl  h-screen mx-auto pt-36 sm:pt-24 text-white relative overflow-hidden">
       <div className="flex flex-col w-full max-w-2xl mx-auto  gap-4">
         <motion.p
           initial={{
@@ -165,7 +165,7 @@ export default function Home() {
         transition={{
           delay: 0.6,
         }}
-        className="h-[150px] sm:h-[300px] w-[1px] absolute top-[450px] sm:top-60 left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"
+        className="h-[150px] sm:h-[300px] w-[1px] absolute top-[500px] sm:top-60 left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"
       ></motion.div>
     </main>
   );
