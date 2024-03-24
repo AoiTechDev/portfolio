@@ -11,9 +11,9 @@ export default function Home() {
       <div className="flex flex-col w-full max-w-2xl mx-auto  gap-4">
         <p className="text-center font-thin">Hey! I am</p>
         <h1 className="text-7xl text-center font-thin">Paweł</h1>
-        <h1 className="text-6xl text-center mt-12 flex font-bold justify-between gap-4">
-          <span className="w-full flex items-end justify-end">Front-end</span>{" "}
-          <span className="w-full flex items-start ">Developer</span>
+        <h1 className="text-6xl text-center mt-12 flex flex-col sm:flex-row font-bold justify-between gap-4 px-4 sm:px-0">
+          <span className="w-full flex sm:items-end sm:justify-end">Front-end</span>{" "}
+          <span className="w-full flex items-end justify-end sm:items-start sm:justify-start">Developer</span>
         </h1>
         <div className="flex justify-around mt-16 text-6xl">
           <motion.div
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[300px] w-[1px] absolute top-60 left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"></div>
+      <div className="h-[300px] w-[1px] absolute top-[450px] sm:top-60 left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"></div>
     </main>
   );
 }
