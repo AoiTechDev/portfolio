@@ -1,11 +1,17 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-import NavItem from "./NavItem";
+import { CiMenuFries } from "react-icons/ci";
+import NavItem from "./common/NavItem";
+import { createPortal } from "react-dom";
+import Menu from "./Menu";
 const Navbar = () => {
+  const [isActive, setIsActive] = React.useState(false);
+
   return (
-    <nav className="w-full bg-background flex justify-between items-start text-white pt-20 px-32">
+    <nav className="w-full bg-background flex justify-end sm:justify-between items-start text-white p-6 sm:pt-20 sm:px-32">
       <div className="sm:flex flex-col gap-5 hidden">
         <div className="space-x-5 ">
           <span>ENG</span>
@@ -31,14 +37,20 @@ const Navbar = () => {
         </div>
       </div>
       {/* <div className="">PBCode</div> */}
-      <div>
-        <ul className="hidden sm:flex flex-col items-end gap-3 ">
-          <NavItem text="Home" />
-          <NavItem text="About" />
-          <NavItem text="Projects" />
-          <NavItem text="Contact" />
-        </ul>
-      </div>
+
+      <ul className="hidden sm:flex flex-col items-end gap-3 ">
+        <NavItem text="Home" />
+        <NavItem text="About" />
+        <NavItem text="Projects" />
+        <NavItem text="Contact" />
+      </ul>
+
+      <CiMenuFries
+        className="text-3xl text-white block sm:hidden"
+        onClick={() => setIsActive((prev) => !prev)}
+      />
+
+      {isActive ? <Menu setIsActive={setIsActive} /> : null}
     </nav>
   );
 };
