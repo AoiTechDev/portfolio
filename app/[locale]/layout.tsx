@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../globals.css";
 import Navbar from "../../components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"], weight: ["200", "100", "300", "400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
   title: "PBCode",
@@ -21,7 +21,7 @@ export default function RootLayout({
         <Navbar />
         <div id="burger"></div>
         <div id="menu"></div>
-        
+
         {children}
       </body>
     </html>
