@@ -20,9 +20,9 @@ const page = () => {
   const splitStackText = stackText.split("");
   return (
     <main className="w-full  h-screen  text-white flex-col ">
-      <div className="w-full max-w-7xl mx-auto mt-32 flex gap-20 ">
-        <div className="flex-1 flex flex-col gap-8 justify-center items-start">
-          <h3 className="text-8xl">Mealfulness</h3>
+      <div className="w-full max-w-7xl mx-auto mt-44 sm:mt-32 flex gap-20 flex-col sm:flex-row px-4">
+        <div className="sm:flex-1 flex flex-col gap-8 justify-center items-start">
+          <h3 className="text-6xl sm:text-8xl">Mealfulness</h3>
           <span className="h-[1px] w-full opacity-50 bg-white"></span>
           <div className="flex w-full justify-between">
             <ul className="flex gap-4">
@@ -47,7 +47,7 @@ const page = () => {
             <li>Live</li>
           </ul>
         </div>
-        <div className=" h-[700px] flex-1 relative">
+        <div className=" h-[700px] sm:flex-1 relative">
           <Image
             fill
             src={chatMock}
@@ -57,7 +57,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="w-full h-full relative mt-32 flex justify-start items-start">
+      <div className="w-full h-[50%] sm:h-full relative my-32 sm:mt-32 flex justify-start items-start bg-gray-800   ">
         <Image
           fill
           src={dashboardMock}
@@ -71,26 +71,26 @@ const page = () => {
           <Section
             title={section.title}
             text={section.text}
-            className={index % 2 === 0 ? "order-1" : "order-2"}
+            className={index % 2 === 0 ? "sm:order-1" : "sm:order-2"}
           />
           <ImageSection
             src={section.image}
             alt={section.imageAlt}
             width={section.imageWidth}
             height={section.imageHeight}
-            className={index % 2 === 0 ? "order-2" : "order-1"}
+            className={index % 2 === 0 ? "sm:order-2" : "sm:order-1"}
           />
         </SectionWrapper>
       ))}
 
-      <div className="w-full h-[60%] max-w-7xl mx-auto relative  flex gap-12 mt-32">
+      <div className="w-full min-h-[60%] max-w-7xl mx-auto relative  flex gap-12 mt-32 flex-col sm:flex-row px-4 pb-32  ">
         <div className="flex justify-start items-start flex-1 gap-12">
           <h4 className="text-4xl uppercase flex flex-col gap-8 stackText relative">
             {splitStackText.map((item, index) => (
               <span key={index}>{item}</span>
             ))}
           </h4>
-          <div className="text-5xl grid grid-cols-2 gap-y-10 gap-x-14">
+          <div className="text-5xl grid grid-cols-2 gap-y-10 gap-x-14 w-full sm:w-1/4 place-items-center sm:place-items-start">
             <BiLogoTypescript />
             <SiNextdotjs />
             <SiTailwindcss />
@@ -101,9 +101,9 @@ const page = () => {
             <SiJest />
           </div>
         </div>
-        <div className="flex-1">
+        <div className="sm:flex-1 mt-32">
           <h4 className="text-3xl">Other technologies I used</h4>
-          <div className=" mt-6 gap-4 flex flex-wrap justify-start items-center w-3/4">
+          <div className=" mt-6 gap-4 flex flex-wrap justify-start items-center w-full sm:w-3/4">
             {technologies.map((tech) => (
               <TechnologyItem key={tech} name={tech} />
             ))}
@@ -159,7 +159,7 @@ const TechnologyItem = ({ name }: { name: string }) => (
 );
 
 const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-full h-[70%] max-w-7xl mx-auto relative  flex gap-12">
+  <div className="w-full h-[70%] max-w-7xl mx-auto relative  flex gap-4 sm:gap-12 flex-col sm:flex-row  mt-44 sm:mt-0">
     {children}
   </div>
 );
@@ -174,11 +174,11 @@ const Section = ({
 }) => (
   <div
     className={cn(
-      "flex-1 flex flex-col gap-8 justify-center items-start ",
+      "sm:flex-1 flex flex-col gap-8 justify-center items-start px-4",
       className
     )}
   >
-    <h4 className="text-6xl">{title}</h4>
+    <h4 className="text-4xl">{title}</h4>
     <span className="h-[1px] w-full opacity-50 bg-white"></span>
     <p className="text-md">{text}</p>
   </div>
@@ -199,7 +199,7 @@ const ImageSection = ({
 }) => (
   <div
     className={cn(
-      "flex-1 px-6 lg:px-8 flex justify-center items-center ",
+      "sm:flex-1 px-6 lg:px-8 flex justify-center items-center ",
       className
     )}
   >
