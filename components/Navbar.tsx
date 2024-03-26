@@ -44,7 +44,7 @@ const Navbar = () => {
   }, [scrollDir]);
 
   return (
-    <nav className="w-full flex justify-end sm:justify-between items-start text-white p-6 sm:pt-20 sm:px-16 z-40 fixed">
+    <nav className="w-full flex justify-end sm:justify-between items-start text-white p-6 sm:pt-20 sm:px-16 z-40 fixed top-0">
       <motion.div
         animate={{ x: scrollDir === "down" ? "-250%" : "0" }}
         className="sm:flex flex-col gap-5 hidden"

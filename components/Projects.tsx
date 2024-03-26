@@ -1,6 +1,7 @@
 import React from "react";
-import mealfulnessLanding from "@/assets/mealfulness-landing.png";
+import chatMock from "@/assets/chat-mobile.png";
 import Image from "next/image";
+import Link from "next/link";
 const Projects = () => {
   return (
     <div className="w-full max-w-7xl  h-screen mx-auto  sm:pt-24 text-white mt-64">
@@ -28,13 +29,14 @@ const Projects = () => {
             <li>Live</li>
           </ul>
           <div className="uppercase ">
-            <span>View project details</span>
+            <Link href="/projects/mealfulness">View project details</Link>
           </div>
         </div>
         <div className="bg- h-[700px] flex-1 relative">
-          <Image fill src={mealfulnessLanding} alt="mealfulness landing page" className="object-contain"/>
+          <Image fill src={chatMock} alt="mealfulness landing page" className="object-contain"/>
         </div>
       </div>
+      
     </div>
   );
 };
