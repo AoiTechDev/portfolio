@@ -15,7 +15,8 @@ import { FaAws } from "react-icons/fa";
 import { DiRedis } from "react-icons/di";
 import { SiJest } from "react-icons/si";
 import { cn } from "@/lib/utils";
-import SectionText from "@/components/common/Section";
+import SectionText from "@/components/common/SectionText";
+import ImageSection from "@/components/common/ImageSection";
 const page = () => {
   const stackText = "stack";
   const splitStackText = stackText.split("");
@@ -81,6 +82,7 @@ const page = () => {
             width={section.imageWidth}
             height={section.imageHeight}
             className={index % 2 === 0 ? "lg:order-2" : "lg:order-1"}
+            index={index}
           />
         </SectionWrapper>
       ))}
@@ -167,36 +169,3 @@ const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
 );
 
 
-const ImageSection = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
-}: {
-  src: StaticImageData;
-  alt: string;
-  width: number;
-  height: number;
-  className: string;
-}) => (
-  <div
-    className={cn(
-      "lg:flex-1 px-6 lg:px-8 flex justify-center items-center ",
-      className
-    )}
-  >
-    <div className="mt-16 flow-root lg:mt-24">
-      <div className="-m-2 rounded-xl bg-slate-50/5 p-2 ring-1 ring-inset ring-slate-50/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-        <Image
-          src={src}
-          width={width}
-          height={height}
-          alt={alt}
-          quality={100}
-          className="rounded-lg bg-white p-2 lg:p-8  shadow-2xl ring-1 ring-gray-900/10"
-        />
-      </div>
-    </div>
-  </div>
-);
