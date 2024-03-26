@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+
 import React from "react";
 import chatMock from "@/assets/chat-mobile.png";
 import dashboardMock from "@/assets/dashboard-desktop-mock.png";
@@ -15,6 +15,7 @@ import { FaAws } from "react-icons/fa";
 import { DiRedis } from "react-icons/di";
 import { SiJest } from "react-icons/si";
 import { cn } from "@/lib/utils";
+import SectionText from "@/components/common/Section";
 const page = () => {
   const stackText = "stack";
   const splitStackText = stackText.split("");
@@ -68,10 +69,11 @@ const page = () => {
 
       {sections.map((section, index) => (
         <SectionWrapper key={index}>
-          <Section
+          <SectionText
             title={section.title}
             text={section.text}
             className={index % 2 === 0 ? "lg:order-1" : "lg:order-2"}
+            index={index}
           />
           <ImageSection
             src={section.image}
@@ -163,26 +165,7 @@ const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
     {children}
   </div>
 );
-const Section = ({
-  title,
-  text,
-  className,
-}: {
-  title: string;
-  text: string;
-  className: string;
-}) => (
-  <div
-    className={cn(
-      "lg:flex-1 flex flex-col gap-8 justify-center items-start px-4",
-      className
-    )}
-  >
-    <h4 className="text-4xl">{title}</h4>
-    <span className="h-[1px] w-full opacity-50 bg-white"></span>
-    <p className="text-lg">{text}</p>
-  </div>
-);
+
 
 const ImageSection = ({
   src,
