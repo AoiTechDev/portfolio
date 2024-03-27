@@ -4,17 +4,18 @@ import React from "react";
 import chatMock from "@/assets/chat-mobile.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { IoIosArrowBack } from "react-icons/io";
+import { useRouter } from "next/navigation";
 const technologies = ["Next.js", "Typescript", "Tailwind CSS"];
 const links = [
   { label: "Github", href: "https://github.com/AoiTechDev" },
   { label: "Live", href: "https://mealfulness.vercel.app/" },
-  
 ];
 
 const MotionComponent = ({
   children,
   delay,
-  x = -200,
+  x = -100,
   y = 0,
 }: {
   children: React.ReactNode;
@@ -39,15 +40,41 @@ const MotionComponent = ({
   </motion.div>
 );
 const Hero = () => {
+  const router = useRouter();
   return (
-    <div className="w-full max-w-7xl mx-auto mt-44 sm:mt-64 lg:mt-32 flex gap-20 flex-col lg:flex-row px-4 overflow-hidden">
-      <div className="lg:flex-1 flex flex-col gap-8 justify-center items-start">
+    <div className="w-full max-w-7xl mx-auto  flex gap-20 flex-col lg:flex-row px-4 overflow-hidden">
+      <div className="lg:flex-1 flex flex-col gap-8 justify-center items-start ">
+        <motion.div
+          initial={{
+            opacity: 0,
+           
+          }}
+          animate={{
+            opacity: 1,
+           
+          }}
+          transition={{ delay: 0.6 }}
+          className="flex justify-center items-center gap-2 cursor-pointer"
+          onClick={() => router.back()}
+        >
+          <IoIosArrowBack className="text-xl" />
+          <span>Back</span>
+        </motion.div>
         <MotionComponent delay={0}>
           <h3 className="text-6xl lg:text-8xl">Mealfulness</h3>
         </MotionComponent>
-        <MotionComponent delay={0.1}>
-          <span className="h-[1px] w-full opacity-50 bg-white"></span>
-        </MotionComponent>
+
+        <motion.span  initial={{
+            opacity: 0,
+            x: -100,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }} 
+          transition={{ delay: 0.1 }}
+          className="h-[1px] w-full opacity-50 bg-white"></motion.span>
+
         <MotionComponent delay={0.2}>
           <div className="flex w-full justify-between">
             <ul className="flex gap-4">
@@ -75,22 +102,33 @@ const Hero = () => {
           {links.map((link, index) => (
             <MotionComponent key={index} delay={0.4 + index * 0.1} y={50}>
               <li className="py-2 px-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md ">
-                <Link href={link.href} target="_blank">{link.label}</Link>
+                <Link href={link.href} target="_blank">
+                  {link.label}
+                </Link>
               </li>
             </MotionComponent>
           ))}
         </ul>
       </div>
-      <MotionComponent delay={0} x={200}>
-        <div className=" h-[700px] lg:flex-1 relative">
-          <Image
-            fill
-            src={chatMock}
-            alt="mealfulness mock mobile"
-            className="object-contain"
-          />
-        </div>
-      </MotionComponent>
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: 100,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+        }}
+        className=" h-[700px] lg:flex-1 relative"
+      >
+        <Image
+          fill
+          src={chatMock}
+          alt="mealfulness mock mobile"
+          className="object-contain"
+        />
+      </motion.div>
     </div>
   );
 };

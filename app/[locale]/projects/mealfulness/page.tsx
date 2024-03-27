@@ -7,7 +7,7 @@ import Sections from "@/components/Projects/Mealfulness/Sections";
 const page = () => {
   return (
     <main className="w-full  h-screen  text-white flex-col ">
-
+      
       <Hero />
       <DashboardMock />
 
