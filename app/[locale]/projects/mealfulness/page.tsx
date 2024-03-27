@@ -1,8 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 import React from "react";
-import chatMock from "@/assets/chat-mobile.png";
-import dashboardMock from "@/assets/dashboard-desktop-mock.png";
+
 import ingredientSearch from "@/assets/ingredient-search.png";
 import stats from "@/assets/stats.png";
 import settings from "@/assets/settings.png";
@@ -12,55 +11,13 @@ import SectionText from "@/components/common/SectionText";
 import ImageSection from "@/components/common/ImageSection";
 import TechnologyItem from "@/components/common/TechnologyItem";
 import Stack from "@/components/Projects/Mealfulness/Stack";
+import DashboardMock from "@/components/Projects/Mealfulness/DashboardMock";
+import Hero from "@/components/Projects/Mealfulness/Hero";
 const page = () => {
-
   return (
     <main className="w-full  h-screen  text-white flex-col ">
-      <div className="w-full max-w-7xl mx-auto mt-44 sm:mt-64 lg:mt-32 flex gap-20 flex-col lg:flex-row px-4">
-        <div className="lg:flex-1 flex flex-col gap-8 justify-center items-start">
-          <h3 className="text-6xl lg:text-8xl">Mealfulness</h3>
-          <span className="h-[1px] w-full opacity-50 bg-white"></span>
-          <div className="flex w-full justify-between">
-            <ul className="flex gap-4">
-              <li>Next.js</li>
-              <li>|</li>
-              <li>Typescript</li>
-              <li>|</li>
-              <li>Tailwind CSS</li>
-            </ul>
-            <span>2024</span>
-          </div>
-          <p className="text-lg">
-            Dynamic meal tracking platform seamlessly integrated with nutrition
-            data from external APIs. Enhanced with AI capabilities for
-            personalized meal guidance, the platform facilitates effortless
-            monitoring of weekly nutrition charts. Designed with streamlined
-            efficiency in mind, it offers intuitive tools for effective meal
-            management.
-          </p>
-          <ul className="flex gap-6">
-            <li>Github</li>
-            <li>Live</li>
-          </ul>
-        </div>
-        <div className=" h-[700px] lg:flex-1 relative">
-          <Image
-            fill
-            src={chatMock}
-            alt="mealfulness mock mobile"
-            className="object-contain"
-          />
-        </div>
-      </div>
-
-      <div className="w-full h-[50%] lg:h-full relative my-32 lg:mt-32 flex justify-start items-start bg-gray-800   ">
-        <Image
-          fill
-          src={dashboardMock}
-          alt="mealfulness landing page"
-          className="object-contain scale-100"
-        />
-      </div>
+      <Hero />
+      <DashboardMock />
 
       {sections.map((section, index) => (
         <SectionWrapper key={index}>
@@ -81,13 +38,12 @@ const page = () => {
         </SectionWrapper>
       ))}
 
-      <Stack/>
+      <Stack />
     </main>
   );
 };
 
 export default page;
-
 
 const sections = [
   {
@@ -121,5 +77,3 @@ const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
     {children}
   </div>
 );
-
-
