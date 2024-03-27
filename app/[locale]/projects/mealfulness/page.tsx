@@ -6,20 +6,14 @@ import dashboardMock from "@/assets/dashboard-desktop-mock.png";
 import ingredientSearch from "@/assets/ingredient-search.png";
 import stats from "@/assets/stats.png";
 import settings from "@/assets/settings.png";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiNextdotjs } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { IoLogoVercel } from "react-icons/io5";
-import { SiPostgresql } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { DiRedis } from "react-icons/di";
-import { SiJest } from "react-icons/si";
+
 import { cn } from "@/lib/utils";
 import SectionText from "@/components/common/SectionText";
 import ImageSection from "@/components/common/ImageSection";
+import TechnologyItem from "@/components/common/TechnologyItem";
+import Stack from "@/components/Projects/Mealfulness/Stack";
 const page = () => {
-  const stackText = "stack";
-  const splitStackText = stackText.split("");
+
   return (
     <main className="w-full  h-screen  text-white flex-col ">
       <div className="w-full max-w-7xl mx-auto mt-44 sm:mt-64 lg:mt-32 flex gap-20 flex-col lg:flex-row px-4">
@@ -87,47 +81,14 @@ const page = () => {
         </SectionWrapper>
       ))}
 
-      <div className="w-full min-h-[60%] max-w-7xl mx-auto relative  flex gap-12 mt-32 sm:mt-64 lg:mt-32 flex-col lg:flex-row px-4 pb-32  ">
-        <div className="flex justify-start items-start flex-1 gap-12">
-          <h4 className="text-4xl uppercase flex flex-col gap-8 stackText relative">
-            {splitStackText.map((item, index) => (
-              <span key={index}>{item}</span>
-            ))}
-          </h4>
-          <div className="text-5xl grid grid-cols-2 gap-y-10 gap-x-14 w-full lg:w-1/4 place-items-center lg:place-items-start">
-            <BiLogoTypescript />
-            <SiNextdotjs />
-            <SiTailwindcss />
-            <IoLogoVercel />
-            <SiPostgresql />
-            <FaAws />
-            <DiRedis />
-            <SiJest />
-          </div>
-        </div>
-        <div className="lg:flex-1 mt-32">
-          <h4 className="text-3xl">Other technologies I used</h4>
-          <div className=" mt-6 gap-4 flex flex-wrap justify-start items-center w-full lg:w-3/4">
-            {technologies.map((tech) => (
-              <TechnologyItem key={tech} name={tech} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <Stack/>
     </main>
   );
 };
 
 export default page;
 
-const technologies = [
-  "Zod",
-  "Shadcn",
-  "Next-Auth",
-  "React Query",
-  "React Hook Form",
-  "React Testing Library",
-];
+
 const sections = [
   {
     title: "Ingredient Based Search",
@@ -154,13 +115,6 @@ const sections = [
     imageHeight: 579,
   },
 ];
-const TechnologyItem = ({ name }: { name: string }) => (
-  <div className="flex justify-center items-center">
-    <span className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-2 font-medium">
-      {name}
-    </span>
-  </div>
-);
 
 const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
   <div className="w-full h-[70%] max-w-7xl mx-auto relative  flex gap-4 lg:gap-12 flex-col lg:flex-row  mt-44 lg:mt-0">
