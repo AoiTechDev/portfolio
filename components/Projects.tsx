@@ -1,19 +1,24 @@
 "use client";
 import React from "react";
-import landpageMock from "@/assets/landpage-mobile-portrait.png";
+import mealfulnessLandpageMock from "@/assets/landpage-mobile-portrait.png";
+import wiredwaveLandpageMock from "@/assets/wiredwave-landpage-portrait.png";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectSection from "./common/ProjectSection/ProjectSection";
 
-const links = [
+const MealfulnessLinks = [
   { label: "Github", href: "https://github.com/AoiTechDev" },
   { label: "Live", href: "https://mealfulness.vercel.app/" },
+];
+const WiredWaveLinks = [
+  { label: "Github", href: "https://github.com/AoiTechDev/wiredwave" },
+  { label: "Live", href: "https://wiredwave.vercel.app/" },
 ];
 
 const Projects = () => {
   return (
     <div className="w-full max-w-7xl  h-screen mx-auto  sm:pt-24 text-white mt-80">
-      <h2 className="text-4xl  text-center uppercase">selected Projects</h2>
+      <h2 className="text-4xl  text-center uppercase">selected projects</h2>
 
       {/* <div className="w-full  mt-32 flex gap-20 flex-col lg:flex-row">
         <div className="lg:flex-1 flex flex-col gap-8 justify-center items-start px-4">
@@ -55,19 +60,37 @@ const Projects = () => {
 
       <ProjectSection
         title="Mealfulness"
-        stack={["Next.js", "Typescript", "Tailwind CSS"]}
+        stack={["Next.js", "Typescript", "TailwindCSS"]}
         year="2024"
         description="Dynamic meal tracking platform integrated with external nutrition API and AI capabilities for personalized meal guidance."
-        links={links}
+        links={MealfulnessLinks}
         project="/projects/mealfulness"
         image={
           <Image
             fill
-            src={landpageMock}
+            src={mealfulnessLandpageMock}
             alt="mealfulness landing page"
             className="object-contain"
           />
         }
+        order={1}
+      />
+       <ProjectSection
+        title="WiredWave"
+        stack={["Next.js", "Typescript", "TailwindCSS"]}
+        year="2023"
+        description="WiredWave is a e-commerce platform tailored for headphone. This app seamlessly integrates captivating design with advanced functionality to redefine the online headphone shopping experience."
+        links={WiredWaveLinks}
+        project="/projects/wiredwave"
+        image={
+          <Image
+            fill
+            src={wiredwaveLandpageMock}
+            alt="mealfulness landing page"
+            className="object-contain"
+          />
+        }
+        order={2}
       />
     </div>
   );
