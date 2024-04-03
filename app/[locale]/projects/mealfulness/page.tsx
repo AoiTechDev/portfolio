@@ -12,7 +12,7 @@ import Image from "next/image";
 import mealfulnessLandpageMock from "@/assets/landpage-mobile-portrait.png";
 const page = () => {
   return (
-    <main className="w-full max-w-7xl mx-auto h-screen  text-white flex-col ">
+    <main className="w-full h-screen  text-white flex-col ">
       <Hero
         title="Mealfulness"
         stack={mealfulnessStack}

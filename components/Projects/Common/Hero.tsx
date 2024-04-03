@@ -17,6 +17,7 @@ const Hero = ({
 }: ProjectSectionType) => {
   const router = useRouter();
   return (
+    <div className="w-full max-w-7xl mx-auto">
     <ProjectSection
       title={title}
       stack={stack}
@@ -42,6 +43,7 @@ const Hero = ({
         </motion.div>
       }
     />
+    </div>
   );
 };
 
