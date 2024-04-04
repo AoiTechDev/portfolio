@@ -10,9 +10,12 @@ import { MealfulnessLinks } from "@/constants/links";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import mealfulnessLandpageMock from "@/assets/landpage-mobile-portrait.png";
+import ProjectLayout from "@/components/Layouts/ProjectLayout";
+import Mock from "@/components/Projects/Common/Mock";
+import dashboardMock from "@/assets/dashboard-desktop-mock.png";
 const page = () => {
   return (
-    <main className="w-full h-screen  text-white flex-col ">
+    <ProjectLayout>
       <Hero
         title="Mealfulness"
         stack={mealfulnessStack}
@@ -35,12 +38,22 @@ const page = () => {
         order={1}
       />
 
-      <DashboardMock />
-
+      {/* <DashboardMock /> */}
+      <Mock
+        image={
+          <Image
+            fill
+            src={dashboardMock}
+            alt="wired landing page"
+            className="object-contain scale-100"
+          />
+        }
+        className="bg-white"
+      />
       <Sections />
 
       <Stack />
-    </main>
+    </ProjectLayout>
   );
 };
 

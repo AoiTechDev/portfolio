@@ -4,10 +4,13 @@ import { wiredwaveStack } from "@/constants/stack";
 import Image from "next/image";
 import React from "react";
 import wiredwaveLandpageMock from "@/assets/wiredwave-landpage-portrait.png";
+import Mock from "@/components/Projects/Common/Mock";
+import wiredwaveDesktopMock from "@/assets/wiredwave-desktop-front.png";
+import ProjectLayout from "@/components/Layouts/ProjectLayout";
 const page = () => {
   return (
-    <div className="w-full text-white max-w-7xl mx-auto  flex gap-20 flex-col lg:flex-row px-4 overflow-hidden">
-      <Hero 
+    <ProjectLayout>
+      <Hero
         title="WiredWave"
         stack={wiredwaveStack}
         year="2023"
@@ -23,7 +26,18 @@ const page = () => {
         }
         order={1}
       />
-    </div>
+      <Mock
+        image={
+          <Image
+            fill
+            src={wiredwaveDesktopMock}
+            alt="wired landing page"
+             className="object-contain scale-100"
+          />
+        }
+     className="bg-white"
+      />
+    </ProjectLayout>
   );
 };
 
