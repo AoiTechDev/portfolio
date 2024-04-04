@@ -2,7 +2,6 @@
 import React from "react";
 
 import Stack from "@/components/Projects/Mealfulness/Stack";
-import DashboardMock from "@/components/Projects/Mealfulness/DashboardMock";
 import Sections from "@/components/Projects/Mealfulness/Sections";
 import Hero from "@/components/Projects/Common/Hero";
 import { mealfulnessStack } from "@/constants/stack";
