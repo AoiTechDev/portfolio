@@ -59,7 +59,7 @@ const sections = [
 ];
 
 const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-full h-[70%] max-w-7xl mx-auto relative  flex gap-4 lg:gap-12 flex-col lg:flex-row  mt-44 lg:mt-0 overflow-x-hidden">
+  <div className="w-full h-[70%] max-w-7xl mx-auto relative  flex gap-4 lg:gap-12 flex-col lg:flex-row  mt-44 lg:mt-0 overflow-hidden">
     {children}
   </div>
 );

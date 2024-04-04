@@ -4,7 +4,10 @@ import "../globals.css";
 import Navbar from "../../components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Poppins({ subsets: ["latin"], weight: ["200", "100", "300", "400", "500", "600", "700", "800", "900"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "100", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "PBCode",
