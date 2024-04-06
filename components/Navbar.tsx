@@ -2,12 +2,12 @@
 import Link from "next/link";
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { IoIosArrowForward } from "react-icons/io";
+
 import { CiMenuFries } from "react-icons/ci";
 import NavItem from "./common/NavItem";
-import { createPortal } from "react-dom";
+
 import Menu from "./Menu";
-import { motion } from "framer-motion";
+
 const Navbar = () => {
   const [isActive, setIsActive] = React.useState(false);
 

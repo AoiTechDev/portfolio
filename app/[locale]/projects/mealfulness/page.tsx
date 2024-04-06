@@ -6,7 +6,7 @@ import Sections from "@/components/Projects/Mealfulness/Sections";
 import Hero from "@/components/Projects/Common/Hero";
 import { mealfulnessStack } from "@/constants/stack";
 import { MealfulnessLinks } from "@/constants/links";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 import mealfulnessLandpageMock from "@/assets/landpage-mobile-portrait.png";
 import ProjectLayout from "@/components/Layouts/ProjectLayout";
