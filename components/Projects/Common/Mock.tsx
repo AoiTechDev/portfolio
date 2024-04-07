@@ -11,7 +11,7 @@ const Mock = ({
   return (
     <div
       className={cn(
-        "w-full h-[50%] lg:h-full relative my-32 lg:mt-32 flex justify-start items-start bg-gray-800   ",
+        "w-full relative my-32 lg:mt-32 flex justify-start items-start bg-white  ",
         className
       )}
     >

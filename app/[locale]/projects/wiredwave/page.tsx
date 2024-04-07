@@ -29,13 +29,11 @@ const page = () => {
       <Mock
         image={
           <Image
-            fill
             src={wiredwaveDesktopMock}
             alt="wired landing page"
-             className="object-contain scale-100"
+            className="lg:scale-[60%] "
           />
         }
-     className="bg-white"
       />
     </ProjectLayout>
   );

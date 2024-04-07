@@ -41,13 +41,12 @@ const page = () => {
       <Mock
         image={
           <Image
-            fill
             src={dashboardMock}
-            alt="wired landing page"
-            className="object-contain scale-100"
+            alt="mealfulness dashboard"
+            className="lg:scale-[60%] "
           />
         }
-        className="bg-white"
+ 
       />
       <Sections />
 
