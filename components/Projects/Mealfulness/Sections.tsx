@@ -5,6 +5,8 @@ import React from "react";
 import ingredientSearch from "@/assets/ingredient-search.png";
 import stats from "@/assets/stats.png";
 import settings from "@/assets/settings.png";
+import { cn } from "@/lib/utils";
+
 const Sections = () => {
 
 
@@ -34,32 +36,33 @@ export default Sections;
 const sections = [
   {
     title: "Ingredient Based Search",
-    text: "Discover our new ingredient-based search! Easily find nutrition details for any food by entering its ingredients. Get instant, detailed nutrition tables for each component of your dish. No more guesswork—just accurate data for better meal tracking.",
+    text: "Ingredient-based search functionality utilizes an external API with nutrition data to retrieve comprehensive nutrition information for any given food. Easily discover nutrition details for any dish by inputting its ingredients, and receive instant, detailed nutrition tables for each component of your meal.",
     image: ingredientSearch,
-    imageAlt: "dashboard preview",
+    imageAlt: "ingredient based search preview",
     imageWidth: 664,
     imageHeight: 461,
   },
   {
     title: "Weekly Statistics",
-    text: "Discover our new ingredient-based search! Easily find nutrition details for any food by entering its ingredients. Get instant, detailed nutrition tables for each component of your dish. No more guesswork—just accurate data for better meal tracking.",
+    text: "For easier tracking user nutrition in time, user can monitor his weekly statistics in a simple and intuitive way. User can change nutrition display and see how they are progressing towards them.",
     image: stats,
-    imageAlt: "dashboard preview",
+    imageAlt: "statistics preview",
     imageWidth: 669,
     imageHeight: 390,
   },
   {
     title: "Settings",
-    text: "Discover our new ingredient-based search! Easily find nutrition details for any food by entering its ingredients. Get instant, detailed nutrition tables for each component of your dish. No more guesswork—just accurate data for better meal tracking.",
+    text: "The Settings panel enables users to manage their accounts, change passwords, email addresses, and names, as well as update their avatars. For image storage, I utilized an AWS S3 bucket.",
     image: settings,
-    imageAlt: "dashboard preview",
+    imageAlt: "settings preview",
     imageWidth: 891,
     imageHeight: 579,
   },
+ 
 ];
 
-const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-full h-[70%] max-w-7xl mx-auto relative  flex gap-4 lg:gap-12 flex-col lg:flex-row  mt-44 lg:mt-0 overflow-hidden">
+export const SectionWrapper = ({ children, className }: { children: React.ReactNode, className?: string }) => (
+  <div className={cn("w-full min-h-[70%] max-w-7xl mx-auto relative  flex gap-4 lg:gap-12 flex-col lg:flex-row  mt-44 lg:mt-0 overflow-hidden", className)}>
     {children}
   </div>
 );
