@@ -53,7 +53,7 @@ const page = () => {
       <Sections />
 
       <div className="mt-44 lg:my-16 w-full min-h-[70%] max-w-7xl mx-auto flex gap-4 lg:gap-12 flex-col lg:flex-row justify-center items-center">
-        <Image src={chat} alt="mobile chat" height={720} className="flex-1 scale-75 order-2 lg:order-1"/>
+        <Image src={chat} alt="mobile chat" height={720} className="flex-1 scale-90 lg:scale-75 order-2 lg:order-1"/>
         <SectionText
           title="Chat assistant"
           text="The chat assistant is a feature that allows users to interact with the platform in a more conversational manner. Users can ask questions about nutrition, meal planning, or any other topic, and the chat assistant will provide helpful responses. The chat assistant is designed to be user-friendly and easy to use, making it a valuable tool for users who want to learn more about nutrition and meal planning."
