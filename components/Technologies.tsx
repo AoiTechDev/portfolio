@@ -30,14 +30,15 @@ const Technologies = () => {
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
         viewport={{ once: true, amount: 0.5 }}
         ref={ref}
-        className="flex justify-center items-center flex-1 gap-12"
+        className="flex flex-col lg:flex-row justify-center items-center flex-1 gap-12"
       >
-        <h4 className="text-4xl uppercase flex flex-col gap-8 stackText relative">
+        <h4 className="text-4xl uppercase flex lg:flex-col gap-8 stackText relative ">
           {splitStackText.map((item, index) => (
             <span key={index}>{item}</span>
           ))}
         </h4>
-        <div className="text-5xl  w-full  flex gap-40 flex-wrap items-center justify-center">
+       
+        <div className="text-5xl  w-full  flex gap-12 lg:gap-40 flex-wrap items-center justify-center">
           <BiLogoTypescript />
           <SiNextdotjs />
           <SiTailwindcss />
