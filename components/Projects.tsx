@@ -11,32 +11,33 @@ import { mealfulnessStack, wiredwaveStack } from "@/constants/stack";
 const Projects = () => {
   return (
     <div className="w-full max-w-7xl  min-h-screen mx-auto  sm:pt-24 text-white mt-80">
-      <h2 className="text-4xl  text-center uppercase">selected projects</h2>
+      <h2 className="text-[140px] flex flex-col text-center  uppercase">
+        <span className="text-start text-background drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)]">selected</span> <span className="text-white text-end">projects</span>
+      </h2>
 
       <div className="space-y-32 mt-32">
-       
-          <ProjectSection
-            title="Mealfulness"
-            stack={mealfulnessStack}
-            year="2024"
-            description="Dynamic meal tracking platform integrated with external nutrition API and AI capabilities for personalized meal guidance."
-            links={MealfulnessLinks}
-            image={
-              <Image
-                fill
-                src={mealfulnessLandpageMock}
-                alt="mealfulness landing page"
-                className="object-contain"
-              />
-            }
-            order={1}
-            details={
-              <div className="uppercase ">
-                <Link href="/projects/mealfulness">View project details</Link>
-              </div>
-            }
-          />
-    
+        <ProjectSection
+          title="Mealfulness"
+          stack={mealfulnessStack}
+          year="2024"
+          description="Dynamic meal tracking platform integrated with external nutrition API and AI capabilities for personalized meal guidance."
+          links={MealfulnessLinks}
+          image={
+            <Image
+              fill
+              src={mealfulnessLandpageMock}
+              alt="mealfulness landing page"
+              className="object-contain"
+            />
+          }
+          order={1}
+          details={
+            <div className="uppercase ">
+              <Link href="/projects/mealfulness">View project details</Link>
+            </div>
+          }
+        />
+
         <ProjectSection
           title="WiredWave"
           stack={wiredwaveStack}
