@@ -5,7 +5,7 @@ import NavItem from "./common/NavItem";
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-7xl mx-auto mt-16 py-10 flex flex-col justify-center items-center text-white space-y-32">
+    <footer className="w-full max-w-7xl mx-auto mt-16 py-10 flex flex-col justify-center items-center text-white space-y-32 px-6">
       <div className="flex w-full flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start space-y-12 lg:space-y-0">
         <div className="space-y-4">
           <div className="flex justify-center lg:justify-start items-center lg:items-start text-4xl gap-8">

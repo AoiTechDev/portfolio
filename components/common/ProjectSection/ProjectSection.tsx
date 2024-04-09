@@ -87,16 +87,16 @@ const ProjectSection = ({
         <ul className="flex gap-6">
           {links.map((link, index) => (
             <MotionComponent key={index} delay={0.4 + index * 0.1} y={50}>
-              <li className="py-2 px-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md ">
-                <Link href={link.href} target="_blank">
+              <Link href={link.href} target="_blank">
+                <li className="py-2 px-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md ">
                   {link.label}
-                </Link>
-              </li>
+                </li>
+              </Link>
             </MotionComponent>
           ))}
         </ul>
 
-        <MotionComponent delay={0.5}>{details}</MotionComponent>
+        {/* <MotionComponent delay={0.5}>{details}</MotionComponent> */}
       </div>
 
       <motion.div
