@@ -11,7 +11,7 @@ import { mealfulnessStack, wiredwaveStack } from "@/constants/stack";
 const Projects = () => {
   return (
     <div className="w-full max-w-7xl  min-h-screen mx-auto  sm:pt-24 text-white mt-80">
-      <h2 className="text-[140px] flex flex-col text-center  uppercase">
+      <h2 className="text-7xl lg:text-[140px] flex flex-col text-center  uppercase p-2 gap-4 lg:gap-0">
         <span className="text-start text-background drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.8)]">selected</span> <span className="text-white text-end">projects</span>
       </h2>
 
