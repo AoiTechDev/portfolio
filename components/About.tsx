@@ -8,7 +8,7 @@ const About = () => {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0  -z-10 overflow-hidden blur-3xl left-20 top-[150px]"
       >
-        <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-[600px] h-[250px] flex justify-center items-center">
+        <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-[450px] h-[200px] flex justify-center items-center">
         
         </div>
       </div>
