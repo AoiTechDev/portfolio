@@ -6,7 +6,7 @@ import { WobbleCard } from "./ui/wobble-card";
 
 const About = () => {
   return (
-    <section className="w-full max-w-[1400px]  min-h-screen mx-auto  sm:pt-24 text-white mt-32 relative">
+    <section className="w-full max-w-[1400px]  min-h-screen mx-auto  sm:pt-24 text-white mt-48 relative">
       {/* <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-full h-32 blur-md"></div> */}
       <div
         aria-hidden="true"
@@ -17,22 +17,24 @@ const About = () => {
         </div> */}
       </div>
 
-      <h2 className="text-[160px] uppercase font-  relative">About</h2>
-      <div className="w-full flex">
-        <div className="flex-1 flex justify-center items-center">
-          <p className="text-lg">
+      <h2 className="text-[100px] lg:text-[160px] uppercase text-center lg:text-left relative">
+        About
+      </h2>
+      <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
+        <div className="order-2 lg:order-1 flex-1 flex justify-center items-center">
+          <p className="text-lg p-4 ">
             I am codding since tech school. I also have degree in Computer
             Science. After graduadee I came up with this challange idea which
             was programming every single day. It has been 250+ days, and I am
             still going. It is not just my job but true passion.
           </p>
         </div>
-        <div className="flex-1 flex justify-end items-end">
-          <Image src={codding} alt="" width={600} />
+        <div className="order-1 lg:order-2 w-[400px] lg:w-[600px] flex-1 flex justify-end items-end">
+          <Image src={codding} alt="" className="rounded-xl"/>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-[1400px]  my-64 mx-auto w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-[1400px]  my-64 mx-auto w-full p-4">
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[500px] lg:min-h-[300px]"
           className=""
@@ -47,13 +49,6 @@ const About = () => {
               various events, workshops and codding every single day.
             </p>
           </div>
-          <Image
-            src="/linear.webp"
-            width={500}
-            height={500}
-            alt="linear demo image"
-            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
-          />
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 min-h-[300px]">
           <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">

@@ -1,5 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+'use client'
+import React, { useRef } from "react";
+import { motion, useInView, useScroll } from "framer-motion";
 import Link from "next/link";
 
 import { ProjectSectionType } from "@/types/types";
@@ -8,11 +9,13 @@ const MotionComponent = ({
   delay,
   x = -100,
   y = 0,
+  inView 
 }: {
   children: React.ReactNode;
   delay: number;
   x?: number;
   y?: number;
+  inView: boolean
 }) => (
   <motion.div
     initial={{
@@ -20,7 +23,7 @@ const MotionComponent = ({
       x,
       y,
     }}
-    animate={{
+    animate={inView && {
       opacity: 1,
       x: 0,
       y: 0,
@@ -42,15 +45,20 @@ const ProjectSection = ({
   back,
   details,
 }: ProjectSectionType) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: "-200px",
+    once: true,
+  });
   return (
-    <div className="w-full  flex gap-20 flex-col lg:flex-row">
+    <div ref={ref} className="w-full  flex gap-20 flex-col lg:flex-row">
       <div
         className={`lg:flex-1 flex flex-col gap-8 justify-center items-start px-4 ${
           order === 1 ? "lg:order-1" : "lg:order-2"
         }`}
       >
         {back}
-        <MotionComponent delay={0}>
+        <MotionComponent  inView={isInView} delay={0}>
           <h3 className="text-6xl lg:text-8xl">{title}</h3>
         </MotionComponent>
         <motion.span
@@ -58,7 +66,7 @@ const ProjectSection = ({
             opacity: 0,
             x: -100,
           }}
-          animate={{
+          animate={isInView && {
             opacity: 0.5,
             x: 0,
           }}
@@ -66,7 +74,7 @@ const ProjectSection = ({
           className="h-[1px] w-full opacity-50 bg-white"
         ></motion.span>
 
-        <MotionComponent delay={0.2}>
+        <MotionComponent  inView={isInView} delay={0.2}>
           <div className="flex w-full justify-between">
             <ul className="flex gap-4">
               {stack
@@ -80,13 +88,13 @@ const ProjectSection = ({
           </div>
         </MotionComponent>
 
-        <MotionComponent delay={0.3}>
+        <MotionComponent  inView={isInView} delay={0.3}>
           <p className="text-lg">{description}</p>
         </MotionComponent>
 
         <ul className="flex gap-6">
           {links.map((link, index) => (
-            <MotionComponent key={index} delay={0.4 + index * 0.1} y={50}>
+            <MotionComponent  inView={isInView} key={index} delay={0.4 + index * 0.1} y={50}>
               <Link href={link.href} target="_blank">
                 <li className="py-2 px-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md ">
                   {link.label}

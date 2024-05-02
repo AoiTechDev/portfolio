@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import mealfulnessLandpageMock from "@/assets/landpage-mobile-portrait.png";
 import wiredwaveLandpageMock from "@/assets/wiredwave-landpage-portrait.png";
 import Image from "next/image";
@@ -8,14 +8,20 @@ import ProjectSection from "./common/ProjectSection/ProjectSection";
 import { MealfulnessLinks, WiredWaveLinks } from "@/constants/links";
 import { mealfulnessStack, wiredwaveStack } from "@/constants/stack";
 import Line from "./line";
+import { useInView } from "framer-motion";
 
 const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: "-200px",
+    once: true,
+  });
   return (
     <div className="w-full max-w-7xl  min-h-screen mx-auto  sm:pt-24 text-white mt-80">
       <h2 className="text-7xl lg:text-[140px] flex flex-col  font-semibold  p-2 gap-4 lg:gap-0">
-        <span className="text-start ">Selected</span>{" "}
-        <span className="text-white text-end">Projects</span>
-        <Line/>
+        <span className="text-start lg:pl-36">Selected</span>{" "}
+        <span className="text-white text-end lg:pr-36">Projects</span>
+        <Line />
       </h2>
 
       <div className="space-y-32 mt-32">
