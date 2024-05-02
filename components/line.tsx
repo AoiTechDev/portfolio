@@ -17,8 +17,8 @@ const Line = () => {
         ></path>
         <defs>
           <linearGradient id="SvgjsLinearGradient1003">
-            <stop stop-color="hsl(266.1764705882353, 83.6065573770492%, 47.843137254901954%)" offset="0"></stop>
-            <stop stop-color="hsl(213.99014778325125, 80.87649402390439%, 50.78431372549019%)" offset="1"></stop>
+            <stop stop-color="hsl(277, 66%, 63%)" offset="0"></stop>
+            <stop stop-color="hsl(245, 71%, 52%)" offset="1"></stop>{" "}
           </linearGradient>
         </defs>
       </svg>

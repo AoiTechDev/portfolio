@@ -17,8 +17,9 @@ const Projects = () => {
     once: true,
   });
   return (
-    <div className="w-full max-w-7xl  min-h-screen mx-auto  sm:pt-24 text-white mt-80">
-      <h2 className="text-7xl lg:text-[140px] flex flex-col  font-semibold  p-2 gap-4 lg:gap-0">
+    <div className="w-full max-w-7xl   min-h-screen mx-auto  sm:pt-24 text-white mt-80">
+      <h2 className="text-7xl relative lg:text-[140px] flex flex-col  font-semibold z-0 p-2 gap-4 lg:gap-0">
+        <div className="absolute left-1/2  -z-10 -translate-x-1/2 w-4/5 md:h-[400px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-5 blur-[90px] pointer-events-none h-1/2"></div>
         <span className="text-start lg:pl-36">Selected</span>{" "}
         <span className="text-white text-end lg:pr-36">Projects</span>
         <Line />

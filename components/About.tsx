@@ -17,7 +17,7 @@ const About = () => {
         </div> */}
       </div>
 
-      <h2 className="text-[100px] lg:text-[160px] uppercase text-center lg:text-left relative">
+      <h2 className="text-[100px] font-semibold aboutHeader lg:text-[190px] uppercase text-center lg:text-left relative ">
         About
       </h2>
       <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">

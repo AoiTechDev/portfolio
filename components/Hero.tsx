@@ -8,7 +8,8 @@ import { SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <main className="w-full max-w-7xl  h-[60vh] mx-auto   text-white relative overflow-hidden flex justify-center items-center mt-24 lg:mt-0">
+    <main className="w-full max-w-7xl  h-[60vh] mx-auto   text-white  overflow-hidden flex justify-center items-center relative mt-24 lg:mt-0 z-0">
+      <div className="absolute left-1/2  -z-10 -translate-x-1/2 w-4/5 md:h-[400px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-5 blur-[90px] pointer-events-none h-1/2"></div>
       <div className="flex flex-col w-full max-w-2xl mx-auto  gap-4">
         <motion.p
           initial={{
