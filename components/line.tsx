@@ -1,8 +1,29 @@
-import React from "react";
+"use client";
+import { useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const Line = () => {
+  const pathRef = useRef<SVGPathElement | null>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: "-200px",
+    once: true,
+  });
+  useEffect(() => {
+    const path = pathRef.current;
+    if (isInView && path) {
+      const length = path.getTotalLength();
+      if (path.style) {
+        path.style.opacity = "1";
+        path.style.strokeDasharray = String(length);
+        path.style.strokeDashoffset = String(length);
+        path.style.animation = "draw 1s linear forwards";
+      }
+    }
+  }, [isInView]);
+
   return (
-    <div>
+    <div ref={ref}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
@@ -14,6 +35,8 @@ const Line = () => {
           stroke-width="15"
           stroke='url("#SvgjsLinearGradient1003")'
           stroke-linecap="round"
+          className="path"
+          ref={pathRef}
         ></path>
         <defs>
           <linearGradient id="SvgjsLinearGradient1003">
