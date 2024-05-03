@@ -8,10 +8,11 @@ import { SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import programming from '@/assets/programming.svg'
+import Glow from "./common/effects/Glow";
 const Hero = () => {
   return (
     <main className="w-full max-w-[1600px]  min-h-[60vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4">
-      <div className="absolute left-[1400px] top-[300px]  -z-10 -translate-x-1/2 w-4/5 md:h-[800px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-30 blur-[90px] pointer-events-none h-1/2"></div>
+      <Glow className="top-3/4 left-1/2"/>
       <div className="min-[1400px]:flex-1 flex justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
         <motion.p
           initial={{

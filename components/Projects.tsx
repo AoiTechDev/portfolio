@@ -10,6 +10,7 @@ import { mealfulnessStack, wiredwaveStack } from "@/constants/stack";
 import Line from "./line";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import Glow from "./common/effects/Glow";
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -17,7 +18,8 @@ const Projects = () => {
     once: true,
   });
   return (
-    <div className="w-full max-w-7xl   min-h-screen mx-auto  sm:pt-24 text-white mt-80">
+    <div className="w-full max-w-7xl relative z-0 min-h-screen mx-auto  sm:pt-24 text-white mt-80">
+      <Glow className="left-1/2 top-1/2"/>
       <h2
         ref={ref}
         className="text-7xl relative lg:text-[140px] flex flex-col  font-semibold z-0 p-2 gap-4 lg:gap-0"

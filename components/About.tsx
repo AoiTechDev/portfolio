@@ -3,21 +3,15 @@ import React from "react";
 import codding from "@/assets/codding.webp";
 import programming from "@/assets/programming.jpg";
 import { WobbleCard } from "./ui/wobble-card";
+import Glow from "./common/effects/Glow";
 
 const About = () => {
   return (
-    <section className="w-full max-w-[1400px]  min-h-screen mx-auto  sm:pt-24 text-white mt-48 relative">
+    <section className="w-full max-w-[1400px] z-0 space-y-12 min-h-screen mx-auto my-32 sm:pt-24 gap-12 text-white p-4  relative">
       {/* <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-full h-32 blur-md"></div> */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0  -z-10 overflow-hidden blur-3xl left-20 top-[150px]"
-      >
-        {/* <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-[450px] h-[200px] flex justify-center items-center">
-        
-        </div> */}
-      </div>
+     <Glow className="left-0 top-[700px] opacity-55"/>
 
-      <h2 className="text-[100px] font-semibold aboutHeader lg:text-[190px] uppercase text-center lg:text-left relative ">
+      <h2 className="text-[100px] font-semibold  lg:text-[190px] uppercase text-center lg:text-left relative ">
         About
       </h2>
       <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
@@ -33,15 +27,14 @@ const About = () => {
           <Image src={codding} alt="" className="rounded-xl" />
         </div>
       </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-[1400px]  my-64 mx-auto w-full p-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]   mx-auto w-full ">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[500px] lg:min-h-[300px]"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[300px] sm:min-h-[500px] lg:min-h-[300px]"
           className=""
         >
           <div className="max-w-md">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              2 Years of Expeirence
+              2 Years of Experience
             </h2>
             <p className="mt-4 text-left  text-base/6 text-neutral-200">
               With a foundation in technology and programming studies, I offer
