@@ -22,7 +22,7 @@ const Projects = () => {
         ref={ref}
         className="text-7xl relative lg:text-[140px] flex flex-col  font-semibold z-0 p-2 gap-4 lg:gap-0"
       >
-        <div className="absolute left-1/2  -z-10 -translate-x-1/2 w-4/5 md:h-[400px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-5 blur-[90px] pointer-events-none h-1/2"></div>
+        <div className="absolute left-1/2  -z-10 -translate-x-1/2 w-4/5 md:h-[400px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-40 blur-[90px] pointer-events-none h-1/2"></div>
         <motion.span
           initial={{
             opacity: 0,

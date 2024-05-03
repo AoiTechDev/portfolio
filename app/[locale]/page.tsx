@@ -10,7 +10,7 @@ import Contact from "@/components/Contact";
 export default async function Home() {
   const stats = await getStats()
   return (
-   <div className="min-h-screen">
+   <div className="min-h-screen overflow-hidden">
    <Hero/>
    <About/>
    <Projects/>

@@ -6,11 +6,13 @@ import { SiNextdotjs } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import programming from '@/assets/programming.svg'
 const Hero = () => {
   return (
-    <main className="w-full max-w-7xl  h-[60vh] mx-auto   text-white  overflow-hidden flex justify-center items-center relative mt-24 lg:mt-0 z-0">
-      <div className="absolute left-1/2  -z-10 -translate-x-1/2 w-4/5 md:h-[400px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-5 blur-[90px] pointer-events-none h-1/2"></div>
-      <div className="flex flex-col w-full max-w-2xl mx-auto  gap-4">
+    <main className="w-full max-w-[1600px]  min-h-[60vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4">
+      <div className="absolute left-[1400px] top-[300px]  -z-10 -translate-x-1/2 w-4/5 md:h-[800px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-30 blur-[90px] pointer-events-none h-1/2"></div>
+      <div className="min-[1400px]:flex-1 flex justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
         <motion.p
           initial={{
             opacity: 0,
@@ -20,11 +22,11 @@ const Hero = () => {
             opacity: 1,
             transform: "translateY(0)",
           }}
-          className="text-center text-lg font-thin"
+          className="text-center min-[1400px]:text-start text-lg "
         >
-          Hey! I am
+          Hey! I am Paweł Bornikowski
         </motion.p>
-        <motion.h1
+        {/* <motion.h1
           initial={{
             opacity: 0,
             transform: "translateY(20px)",
@@ -36,11 +38,11 @@ const Hero = () => {
           transition={{
             delay: 0.2,
           }}
-          className="text-7xl text-center font-thin"
+          className="text-7xl text-start font-thin"
         >
-          Paweł
-        </motion.h1>
-        <h1 className="text-6xl text-center mt-12 flex flex-col sm:flex-row font-bold justify-between gap-4 px-4 sm:px-0">
+          Paweł Bornikowski
+        </motion.h1> */}
+        <h1 className="text-6xl text-start flex flex-col font-bold justify-between gap-4 px-4 min-[1400px]:px-0">
           <motion.span
             initial={{
               opacity: 0,
@@ -53,7 +55,7 @@ const Hero = () => {
             transition={{
               delay: 0.4,
             }}
-            className="w-full flex sm:items-end sm:justify-end"
+            className="w-full text-center min-[1400px]:text-start bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text"
           >
             Front-end
           </motion.span>{" "}
@@ -69,11 +71,16 @@ const Hero = () => {
             transition={{
               delay: 0.4,
             }}
-            className="w-full flex items-end justify-end sm:items-start sm:justify-start"
+            className="w-full text-center min-[1400px]:text-start bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text"
           >
             Developer
           </motion.span>
         </h1>
+        <p className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start">
+          Step into my digital universe, where pixels come alive and code
+          paints the canvas of innovation, showcasing front-end mastery in every
+          click.
+        </p>
         <motion.div
           initial={{
             opacity: 0,
@@ -86,9 +93,9 @@ const Hero = () => {
           transition={{
             delay: 0.6,
           }}
-          className="flex justify-around mt-16 text-6xl"
+          className="flex justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl"
         >
-          <motion.div
+          {/* <motion.div
             initial={{
               transform: "translateY(-20px)",
             }}
@@ -151,11 +158,17 @@ const Hero = () => {
             }}
           >
             <SiTailwindcss />
-          </motion.div>
+          </motion.div> */}
+          <FaReact />
+          <SiNextdotjs />
+          <BiLogoTypescript />
+          <SiTailwindcss />
         </motion.div>
       </div>
-
-      <motion.div
+      <div className="min-[1400px]:flex-1 mt-16 flex justify-center items-center">
+        <Image src={programming} alt="programming" />
+      </div>
+      {/* <motion.div
         initial={{
           scale: 0,
         }}
@@ -165,8 +178,8 @@ const Hero = () => {
         transition={{
           delay: 0.6,
         }}
-        className="h-[150px] sm:h-[300px] w-[1px] absolute top-[400px] sm:top-[250px] left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"
-      ></motion.div>
+        className="h-[150px] min-[1400px]:h-[300px] w-[1px] absolute top-[400px] sm:top-[250px] left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"
+      ></motion.div> */}
     </main>
   );
 };

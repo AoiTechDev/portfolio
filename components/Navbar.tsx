@@ -38,6 +38,7 @@ const Navbar = () => {
         </div>
       </div>
 
+
       <ul className="hidden sm:flex flex-col items-end gap-3 ">
         <NavItem text="Home" />
         <NavItem text="About" />

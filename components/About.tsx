@@ -23,14 +23,14 @@ const About = () => {
       <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
         <div className="order-2 lg:order-1 flex-1 flex justify-center items-center">
           <p className="text-lg p-4 ">
-            I am codding since tech school. I also have degree in Computer
-            Science. After graduadee I came up with this challange idea which
-            was programming every single day. It has been 250+ days, and I am
-            still going. It is not just my job but true passion.
+            I have been coding since my time in tech school and have a degree in
+            Computer Science. After graduating, I initiated a personal challenge
+            to code every day. It is been over 250 days now, and I am still
+            committed. Coding is not just a job for me; it is a genuine passion.
           </p>
         </div>
         <div className="order-1 lg:order-2 w-[400px] lg:w-[600px] flex-1 flex justify-end items-end">
-          <Image src={codding} alt="" className="rounded-xl"/>
+          <Image src={codding} alt="" className="rounded-xl" />
         </div>
       </div>
 
@@ -39,14 +39,14 @@ const About = () => {
           containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[500px] lg:min-h-[300px]"
           className=""
         >
-          <div className="max-w-xs">
+          <div className="max-w-md">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
               2 Years of Expeirence
             </h2>
             <p className="mt-4 text-left  text-base/6 text-neutral-200">
-              Despite Having tech school and studies in direction of
-              programming, I have 1 year of internship as also took part in
-              various events, workshops and codding every single day.
+              With a foundation in technology and programming studies, I offer
+              one year of internship experience along with consistent engagement
+              in events, workshops, and daily coding activities.{" "}
             </p>
           </div>
         </WobbleCard>
@@ -55,16 +55,17 @@ const About = () => {
             10+ Projects
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            I have built multiple different projects.
+            I have worked on many projects, both on my own and with teams during
+            hackathons.{" "}
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-gradient-to-r from-indigo-700 to-purple-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
           <div className="max-w-sm">
             <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              True passion for programming and creating interfaces.
+              True passion for creating interfaces
             </h2>
             <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-              I am codding on daily basis as also take part in hackathons.
+            Beeing a front-end developer gives me 
             </p>
           </div>
           <Image
