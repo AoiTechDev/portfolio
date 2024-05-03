@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section className="w-full max-w-[1400px] z-0 space-y-12 min-h-screen mx-auto my-32 sm:pt-24 gap-12 text-white p-4  relative">
       {/* <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-full h-32 blur-md"></div> */}
-     <Glow className="left-0 top-[700px] opacity-55"/>
+     <Glow className="sm:left-0 sm:top-[700px] opacity-55"/>
 
       <h2 className="text-[100px] font-semibold  lg:text-[190px] uppercase text-center lg:text-left relative ">
         About

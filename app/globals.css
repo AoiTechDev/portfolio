@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.stackText::before{
-  content: '';
+.stackText::before {
+  content: "";
   position: absolute;
   width: 2px;
   height: 100%;
@@ -31,12 +31,18 @@
   opacity: 0;
 }
 
-.aboutHeader::before{
+.aboutHeader::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 50%;
   height: 2px;
   background-color: white;
   bottom: 0;
   left: 0;
+}
+
+.techCardShadow {
+  -webkit-box-shadow: 13px 16px 50px 7px #151515;
+  -moz-box-shadow: 13px 16px 50px 7px #151515;
+  box-shadow: 13px 16px 50px 7px #151515;
 }

@@ -7,12 +7,12 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import programming from '@/assets/programming.svg'
+import programming from "@/assets/programming.svg";
 import Glow from "./common/effects/Glow";
 const Hero = () => {
   return (
     <main className="w-full max-w-[1600px]  min-h-[60vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4">
-      <Glow className="top-3/4 left-1/2"/>
+      <Glow className="top-3/4 left-1/2" />
       <div className="min-[1400px]:flex-1 flex justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
         <motion.p
           initial={{
@@ -27,22 +27,7 @@ const Hero = () => {
         >
           Hey! I am Paweł Bornikowski
         </motion.p>
-        {/* <motion.h1
-          initial={{
-            opacity: 0,
-            transform: "translateY(20px)",
-          }}
-          animate={{
-            opacity: 1,
-            transform: "translateY(0)",
-          }}
-          transition={{
-            delay: 0.2,
-          }}
-          className="text-7xl text-start font-thin"
-        >
-          Paweł Bornikowski
-        </motion.h1> */}
+
         <h1 className="text-6xl text-start flex flex-col font-bold justify-between gap-4 px-4 min-[1400px]:px-0">
           <motion.span
             initial={{
@@ -54,7 +39,7 @@ const Hero = () => {
               transform: "translateY(0)",
             }}
             transition={{
-              delay: 0.4,
+              delay: 0.2,
             }}
             className="w-full text-center min-[1400px]:text-start bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text"
           >
@@ -70,18 +55,30 @@ const Hero = () => {
               transform: "translateY(0)",
             }}
             transition={{
-              delay: 0.4,
+              delay: 0.2,
             }}
             className="w-full text-center min-[1400px]:text-start bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text"
           >
             Developer
           </motion.span>
         </h1>
-        <p className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start">
-          Step into my digital universe, where pixels come alive and code
-          paints the canvas of innovation, showcasing front-end mastery in every
-          click.
-        </p>
+        <motion.p
+          initial={{
+            opacity: 0,
+            transform: "translateY(20px)",
+          }}
+          animate={{
+            opacity: 1,
+            transform: "translateY(0)",
+          }}
+          transition={{
+            delay: 0.4,
+          }}
+          className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start"
+        >
+          Step into my digital universe, where pixels come alive and code paints
+          the canvas of innovation, showcasing front-end mastery in every click.
+        </motion.p>
         <motion.div
           initial={{
             opacity: 0,
@@ -96,79 +93,30 @@ const Hero = () => {
           }}
           className="flex justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl"
         >
-          {/* <motion.div
-            initial={{
-              transform: "translateY(-20px)",
-            }}
-            animate={{
-              transform: "translateY(20px)",
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-          >
-            <FaReact />
-          </motion.div>
-          <motion.div
-            initial={{
-              transform: "translateY(20px)",
-            }}
-            animate={{
-              transform: "translateY(-20px)",
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-          >
-            <SiNextdotjs />
-          </motion.div>
-          <motion.div
-            initial={{
-              transform: "translateY(-20px)",
-            }}
-            animate={{
-              transform: "translateY(20px)",
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-          >
-            <BiLogoTypescript />
-          </motion.div>
-          <motion.div
-            initial={{
-              transform: "translateY(20px)",
-            }}
-            animate={{
-              transform: "translateY(-20px)",
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-          >
-            <SiTailwindcss />
-          </motion.div> */}
           <FaReact />
           <SiNextdotjs />
           <BiLogoTypescript />
           <SiTailwindcss />
         </motion.div>
       </div>
-      <div className="min-[1400px]:flex-1 mt-16 flex justify-center items-center">
-        <Image src={programming} alt="programming" />
-      </div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0,
+          
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          delay: 0.4,
+
+        }}
+        className="min-[1400px]:flex-1 mt-16 flex justify-center items-center"
+      >
+        <Image src={programming} alt="programming" width={700} />
+      </motion.div>
       {/* <motion.div
         initial={{
           scale: 0,
