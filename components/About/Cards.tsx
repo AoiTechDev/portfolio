@@ -11,15 +11,15 @@ const Cards = () => {
   const thirdRef = useRef(null);
 
   const firstIsInView = useInView(firstRef, {
-    margin: "200px",
+    margin: "100px",
     once: true,
   });
   const sectIsInView = useInView(secRef, {
-    margin: "200px",
+    margin: "100px",
     once: true,
   });
   const thirdIsInView = useInView(thirdRef, {
-    margin: "200px",
+    margin: "100px",
     once: true,
   });
   return (

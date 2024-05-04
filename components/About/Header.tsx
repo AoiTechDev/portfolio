@@ -8,6 +8,7 @@ const Header = () => {
     margin: "-100px",
     once: true,
   });
+
   return (
     <motion.h2
       initial={{

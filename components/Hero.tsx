@@ -9,7 +9,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import programming from "@/assets/programming.svg";
 import Glow from "./common/effects/Glow";
+import { useMediaQuery } from "@mui/material";
 const Hero = () => {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   return (
     <main className="w-full max-w-[1600px]  min-h-[60vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4">
       <Glow className="top-3/4 left-1/2" />
@@ -110,7 +112,7 @@ const Hero = () => {
           scale: 1,
         }}
         transition={{
-          delay: 0.4,
+          delay:  isSmallDevice ? 0.8 : 0.6,
 
         }}
         className="min-[1400px]:flex-1 mt-16 flex justify-center items-center"
