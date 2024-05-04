@@ -1,29 +1,25 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiNextdotjs } from "react-icons/si";
+
 import { SiTailwindcss } from "react-icons/si";
-import { IoLogoVercel } from "react-icons/io5";
-import { SiPostgresql } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { DiRedis } from "react-icons/di";
-import { SiJest } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { RiJavascriptFill } from "react-icons/ri";
-import { FaSass } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
-import { FaHtml5 } from "react-icons/fa";
-import { PiFigmaLogoBold } from "react-icons/pi";
+
 import { TracingBeam } from "./ui/tracing-beam";
-import Image from "next/image";
-import { twMerge } from "tailwind-merge";
+
 import TechCard from "./common/TechCard";
 import { LogosTestingLibrary } from "./common/Icons/LogosTestingLibrary";
 import { SiAdobexd } from "react-icons/si";
+import TypeScript from "./common/Icons/Typescript";
+import JavaScript from "./common/Icons/Javascript";
+import CSS from "./common/Icons/Css3";
+import Sass from "./common/Icons/Sass";
+import PostgreSQL from "./common/Icons/Postgres";
+import Redis from "./common/Icons/Redis";
+import Next from "./common/Icons/Next";
+import ReactIcon from "./common/Icons/ReactIcon";
+import Jest from "./common/Icons/Jest";
+import Figma from "./common/Icons/Figma";
 const Technologies = () => {
-  const stackText = "stack";
-  const splitStackText = stackText.split("");
   const ref = useRef(null);
   const isInView = useInView(ref, {
     margin: "-200px",
@@ -31,7 +27,9 @@ const Technologies = () => {
   });
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
-      <h2   className="text-center w-full text-7xl relative lg:text-[140px] mb-36">My Skills</h2>
+      <h2 className="text-center w-full text-7xl relative lg:text-[140px] mb-36">
+        My Skills
+      </h2>
       <div className="flex w-full justify-center items-start gap-8 relative">
         <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl">
           {" "}
@@ -40,11 +38,11 @@ const Technologies = () => {
             tech={[
               {
                 name: "TypeScript",
-                tech: <BiLogoTypescript />,
+                tech: <TypeScript />,
               },
               {
                 name: "Javascript",
-                tech: <RiJavascriptFill />,
+                tech: <JavaScript />,
               },
             ]}
           />
@@ -54,15 +52,15 @@ const Technologies = () => {
             tech={[
               {
                 name: "CSS3",
-                tech: <IoLogoCss3 />,
+                tech: <CSS />,
               },
               {
                 name: "Sass / Scss",
-                tech: <FaSass />,
+                tech: <Sass />,
               },
               {
                 name: "TailwindCSS",
-                tech: <SiTailwindcss />,
+                tech: <SiTailwindcss className="text-[#19b5ba]" />,
               },
             ]}
           />
@@ -72,18 +70,18 @@ const Technologies = () => {
             tech={[
               {
                 name: "PostgreSQL",
-                tech: <SiPostgresql />,
+                tech: <PostgreSQL />,
               },
               {
                 name: "Redis",
-                tech: <DiRedis />,
+                tech: <Redis />,
               },
             ]}
           />
         </div>
         <div className="order-1 sm:order-2 w-4 flex justify-center items-center">
-          <TracingBeam className=" ">
-            <div className="max-w-2xl mx-auto antialiased pt-4 relative h-[270vh]"></div>
+          <TracingBeam>
+            <div className="max-w-2xl mx-auto antialiased pt-4 relative h-[250vh]"></div>
           </TracingBeam>
         </div>
         <div className="order-3 absolute sm:relative flex justify-center flex-col items-center left-20 text-6xl">
@@ -93,11 +91,11 @@ const Technologies = () => {
             tech={[
               {
                 name: "Next.js",
-                tech: <SiNextdotjs />,
+                tech: <Next />,
               },
               {
                 name: "React",
-                tech: <FaReact />,
+                tech: <ReactIcon />,
               },
             ]}
           />
@@ -107,7 +105,7 @@ const Technologies = () => {
             tech={[
               {
                 name: "Jest",
-                tech: <SiJest />,
+                tech: <Jest />,
               },
               {
                 name: "React Testing Library",
@@ -125,7 +123,7 @@ const Technologies = () => {
               },
               {
                 name: "Figma",
-                tech: <PiFigmaLogoBold />,
+                tech: <Figma />,
               },
             ]}
           />

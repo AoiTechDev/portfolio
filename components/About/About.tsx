@@ -2,18 +2,16 @@ import Image from "next/image";
 import React from "react";
 import codding from "@/assets/codding.webp";
 import programming from "@/assets/programming.jpg";
-import { WobbleCard } from "./ui/wobble-card";
-import Glow from "./common/effects/Glow";
+import { WobbleCard } from "../ui/wobble-card";
+import Glow from "../common/effects/Glow";
+import Header from "./Header";
 
 const About = () => {
   return (
     <section className="w-full max-w-[1400px] z-0 space-y-12 min-h-screen mx-auto my-32 sm:pt-24 gap-12 text-white p-4  relative">
-      {/* <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-full h-32 blur-md"></div> */}
-     <Glow className="sm:left-0 sm:top-[700px] opacity-55"/>
-
-      <h2 className="text-[100px] font-semibold  lg:text-[190px] uppercase text-center lg:text-left relative ">
-        About
-      </h2>
+      <Glow className="sm:left-0 sm:top-[700px] opacity-55" />
+    <Header/>
+      
       <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
         <div className="order-2 lg:order-1 flex-1 flex justify-center items-center">
           <p className="text-lg p-4 ">
@@ -27,7 +25,7 @@ const About = () => {
           <Image src={codding} alt="" className="rounded-xl" />
         </div>
       </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]   mx-auto w-full ">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]   mx-auto w-full ">
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[300px] sm:min-h-[500px] lg:min-h-[300px]"
           className=""
@@ -58,7 +56,7 @@ const About = () => {
               True passion for creating interfaces
             </h2>
             <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            Beeing a front-end developer gives me 
+              Beeing a front-end developer gives me
             </p>
           </div>
           <Image
@@ -66,7 +64,7 @@ const About = () => {
             width={500}
             height={500}
             alt="linear demo image"
-            className="absolute    -right-5 -bottom-5  object-contain rounded-2xl"
+            className="absolute    -right-8 -bottom-10  object-contain rounded-2xl"
           />
         </WobbleCard>
       </div>

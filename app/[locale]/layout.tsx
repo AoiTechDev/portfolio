@@ -10,7 +10,7 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PBCode",
+  title: "PBornikowski",
   description: "My personal portfolio",
 };
 
