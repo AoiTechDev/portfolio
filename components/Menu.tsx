@@ -28,10 +28,10 @@ const Menu = ({
 
       <div className=" w-full max-w-3xl mx-auto">
         <ul className="flex flex-col items-center text-3xl gap-10 text-white">
-          <NavItem text="Home" />
-          <NavItem text="About" />
-          <NavItem text="Projects" />
-          <NavItem text="Contact" />
+          <NavItem text="Home" link="/" />
+          <NavItem text="About" link="#about" />
+          <NavItem text="Projects" link="#projects" />
+          <NavItem text="Skills" link="#skills" />
         </ul>
       </div>
 
