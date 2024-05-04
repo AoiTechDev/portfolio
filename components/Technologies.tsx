@@ -26,7 +26,7 @@ const Technologies = () => {
     once: true,
   });
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
+    <section id="skills" className="w-full max-w-7xl mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
       <h2 className="text-center w-full text-7xl relative lg:text-[140px] mb-36">
         My Skills
       </h2>
@@ -137,7 +137,7 @@ const Technologies = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

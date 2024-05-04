@@ -117,7 +117,7 @@ const Hero = () => {
         }}
         className="min-[1400px]:flex-1 mt-16 flex justify-center items-center"
       >
-        <Image src={programming} alt="programming" width={700} />
+        <Image priority src={programming} alt="programming" width={700} />
       </motion.div>
       {/* <motion.div
         initial={{

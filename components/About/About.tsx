@@ -9,7 +9,7 @@ import Cards from "./Cards";
 
 const About = () => {
   return (
-    <section className="w-full max-w-[1400px] z-0 space-y-12 min-h-screen mx-auto my-32 sm:pt-24 gap-12 text-white p-4  relative">
+    <section id="about" className="w-full max-w-[1400px] z-0 space-y-12 min-h-screen mx-auto my-32 sm:pt-24 gap-12 text-white p-4  relative">
       <Glow className="sm:left-0 sm:top-[700px] opacity-55" />
     <Header/>
       

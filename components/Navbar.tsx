@@ -40,10 +40,11 @@ const Navbar = () => {
 
 
       <ul className="hidden sm:flex flex-col items-end gap-3 ">
-        <NavItem text="Home" />
-        <NavItem text="About" />
-        <NavItem text="Projects" />
-        <NavItem text="Contact" />
+        {/* <NavItem text="Home" link="/"/> */}
+        <NavItem text="About" link="#about"/>
+        <NavItem text="Projects" link="#projects"/>
+        <NavItem text="Skills" link="#skills"/>
+        {/* <NavItem text="Contact" /> */}
       </ul>
 
       <CiMenuFries

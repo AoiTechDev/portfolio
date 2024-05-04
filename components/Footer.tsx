@@ -27,9 +27,10 @@ const Footer = () => {
           </div>
           <div className="bg-gradient-to-r from-purple-500 to-indigo-600 w-32 h-[2px]"></div>
           <ul className="flex flex-col justify-center items-center lg:items-start gap-4">
-            <NavItem text="Home" />
-            <NavItem text="About" />
-            <NavItem text="Projects" />
+            <NavItem text="Home" link="/" />
+            <NavItem text="About" link="#about" />
+            <NavItem text="Projects" link="#projects" />
+            <NavItem text="Skills" link="#skills" />
           </ul>
         </div>
         <div className="flex flex-col justify-center lg:justify-end items-center lg:items-end space-y-4">

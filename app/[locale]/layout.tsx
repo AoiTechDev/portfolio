@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html style={{scrollBehavior:'smooth'}} lang="en">
       <body className={`${inter.className} bg-background`}>
         <Navbar />
         <div id="burger"></div>
