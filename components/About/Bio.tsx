@@ -16,12 +16,11 @@ const Bio = () => {
     once: true,
   });
 
-  
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
       <div className="order-2 lg:order-1 flex-1 flex justify-center items-center">
         <motion.p
-        ref={pRef}
+          ref={pRef}
           initial={{
             opacity: 0,
             y: 100,
@@ -34,10 +33,7 @@ const Bio = () => {
           }
           className="text-lg p-4 "
         >
-          I have been coding since my time in tech school and have a degree in
-          Computer Science. After graduating, I initiated a personal challenge
-          to code every day. It is been over 250 days now, and I am still
-          committed. Coding is not just a job for me; it is a genuine passion.
+          {`Since my days in technical school, I've been deeply involved in coding. I later graduated with a degree in Computer Science and have since committed to coding daily for over 260 days. Taking part in Hackathons has revealed the excitement of working in a team with similar-minded individuals. I'm fueled by tackling new challenges and stretching my abilities. My goal is to become an outstanding Front-end Developer by continuously creating innovative and advanced projects.`}
         </motion.p>
       </div>
       <motion.div

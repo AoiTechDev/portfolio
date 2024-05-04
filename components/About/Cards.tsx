@@ -43,7 +43,7 @@ const Cards = () => {
           className="max-w-md"
         >
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            2 Years of Experience
+            1+ Year of Experience
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
             With a foundation in technology and programming studies, I offer one
@@ -94,7 +94,7 @@ const Cards = () => {
             True passion for creating interfaces
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            Beeing a front-end developer gives me
+            Beeing a front-end developer gives me great joy and possibilities to do what I truly love.
           </p>
         </motion.div>
         <Image
