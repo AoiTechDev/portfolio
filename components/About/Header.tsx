@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 const Header = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    margin: "-200px",
+    margin: "-100px",
     once: true,
   });
   return (

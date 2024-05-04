@@ -35,6 +35,7 @@ const Technologies = () => {
           {" "}
           <TechCard
             title="Programming Languages"
+            dir="left"
             tech={[
               {
                 name: "TypeScript",
@@ -49,6 +50,7 @@ const Technologies = () => {
           <TechCard
             className="mt-[448px]  sm:mt-80"
             title="Styling"
+            dir="left"
             tech={[
               {
                 name: "CSS3",
@@ -67,6 +69,7 @@ const Technologies = () => {
           <TechCard
             className="mt-[448px] sm:mt-80"
             title="Database"
+            dir="left"
             tech={[
               {
                 name: "PostgreSQL",
@@ -88,6 +91,7 @@ const Technologies = () => {
           <TechCard
             className="mt-96 sm:mt-80"
             title="Frameworks"
+            dir="right"
             tech={[
               {
                 name: "Next.js",
@@ -102,6 +106,8 @@ const Technologies = () => {
           <TechCard
             className="mt-[468px]   sm:mt-80"
             title="Testing"
+            dir="right"
+
             tech={[
               {
                 name: "Jest",
@@ -116,6 +122,8 @@ const Technologies = () => {
           <TechCard
             className="mt-[468px] sm:mt-80"
             title="Design"
+            dir="right"
+
             tech={[
               {
                 name: "Adobe XD",
