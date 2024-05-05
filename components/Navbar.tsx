@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = React.useState(false);
 
   return (
-    <nav className="w-full flex justify-end sm:justify-between items-start text-white p-6 sm:pt-16 sm:px-16 z-40  top-0">
+    <nav className="w-full flex justify-end sm:justify-between items-start text-white p-4 sm:pt-16 sm:px-16 z-40 fixed sm:relative glass top-0">
       <div className="sm:flex flex-col gap-5 hidden">
         {/* <div className="space-x-5 ">
           <span>ENG</span>
