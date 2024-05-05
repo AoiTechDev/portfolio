@@ -34,7 +34,8 @@ const Technologies = () => {
       {t("skills:header")}
       </h2>
       <div className="flex w-full justify-center items-start gap-8 relative">
-        <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl">
+        
+        <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl pr-4">
           {" "}
           <TechCard
             title={t("skills:programming_languages")}
@@ -85,12 +86,12 @@ const Technologies = () => {
             ]}
           />
         </div>
-        <div className="order-1 sm:order-2 w-4 flex justify-center items-center">
+        <div className="order-1 sm:order-2 w-4 flex justify-end sm:justify-center items-end sm:items-center">
           <TracingBeam>
-            <div className="max-w-2xl mx-auto antialiased pt-4 relative h-[250vh]"></div>
+            <div className="max-w-2xl mx-auto antialiased pt-4 relative min-h-[300vh] sm:min-h-[250vh]"></div>
           </TracingBeam>
         </div>
-        <div className="order-3 absolute sm:relative flex justify-center flex-col items-center left-20 text-6xl">
+        <div className="order-3 absolute sm:relative flex justify-center flex-col items-center left-[calc(48px+2px)] sm:left-4 text-6xl">
           <TechCard
             className="mt-96 sm:mt-80"
             title="Frameworks"

@@ -1,4 +1,4 @@
-'use client'
+
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { IoMdClose } from "react-icons/io";
@@ -14,9 +14,14 @@ const Menu = ({
 }) => {
   const [isClient, setClient] = useState(false);
   const { t } = useTranslation();
+
+  const handleClick = () => {
+    setIsActive((prev) => !prev)
+  }
   useEffect(() => {
     setClient(true);
   }, []);
+
 
   if (!isClient) {
     return null;
@@ -26,15 +31,15 @@ const Menu = ({
     <div className="fixed top-0 h-[100dvh] w-full bg-background z-40 flex justify-center items-center">
       <IoMdClose
         className="text-3xl text-white top-6 right-6 absolute"
-        onClick={() => setIsActive((prev) => !prev)}
+        onClick={handleClick}
       />
 
       <div className=" w-full max-w-3xl mx-auto">
         <ul className="flex flex-col items-center text-3xl gap-10 text-white">
-          <NavItem text={t("common:home")} link="/" />
-          <NavItem text={t("common:about")} link="#about" />
-          <NavItem text={t("common:projects")} link="#projects" />
-          <NavItem text={t("common:skills")} link="#skills" />
+          <NavItem text={t("common:home")} link="/" onClick={handleClick} />
+          <NavItem text={t("common:about")} link="#about" onClick={handleClick}/>
+          <NavItem text={t("common:projects")} link="#projects" onClick={handleClick}/>
+          <NavItem text={t("common:skills")} link="#skills" onClick={handleClick}/>
         </ul>
       </div>
 
