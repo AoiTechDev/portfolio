@@ -10,8 +10,12 @@ import Image from "next/image";
 import programming from "@/assets/programming.svg";
 import Glow from "./common/effects/Glow";
 import { useMediaQuery } from "@mui/material";
+import { TFunction } from "i18next";
+import { useTranslation } from "react-i18next";
 const Hero = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+
+  const { t } = useTranslation();
   return (
     <main className="w-full max-w-[1600px]  min-h-[60vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4">
       <Glow className="top-3/4 left-1/2" />
@@ -27,7 +31,7 @@ const Hero = () => {
           }}
           className="text-center min-[1400px]:text-start text-lg "
         >
-          Hey! I am Paweł Bornikowski
+         {t("Home:greetings")}
         </motion.p>
 
         <h1 className="text-6xl text-start flex flex-col font-bold justify-between gap-4 px-4 min-[1400px]:px-0">

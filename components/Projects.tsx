@@ -11,6 +11,7 @@ import Line from "./line";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import Glow from "./common/effects/Glow";
+import { TFunction } from "i18next";
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {

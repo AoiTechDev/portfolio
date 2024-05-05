@@ -19,6 +19,7 @@ import Next from "./common/Icons/Next";
 import ReactIcon from "./common/Icons/ReactIcon";
 import Jest from "./common/Icons/Jest";
 import Figma from "./common/Icons/Figma";
+import { TFunction } from "i18next";
 const Technologies = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {

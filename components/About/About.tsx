@@ -6,6 +6,7 @@ import Glow from "../common/effects/Glow";
 import Header from "./Header";
 import Bio from "./Bio";
 import Cards from "./Cards";
+import { TFunction } from "i18next";
 
 const About = () => {
   return (
