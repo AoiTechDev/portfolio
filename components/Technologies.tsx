@@ -29,7 +29,7 @@ const Technologies = () => {
   });
   const { t } = useTranslation();
   return (
-    <section id="skills" className="w-full max-w-7xl mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
+    <section id="skills" className="w-full max-w-7xl min-h-[300vh] mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
       <h2 className="text-center w-full text-7xl relative lg:text-[140px] mb-36">
       {t("skills:header")}
       </h2>
