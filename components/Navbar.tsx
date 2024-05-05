@@ -7,6 +7,7 @@ import { CiMenuFries } from "react-icons/ci";
 import NavItem from "./common/NavItem";
 
 import Menu from "./Menu";
+import LanguageChanger from "./LanguageChanger";
 
 const Navbar = () => {
   const [isActive, setIsActive] = React.useState(false);
@@ -14,10 +15,11 @@ const Navbar = () => {
   return (
     <nav className="w-full flex justify-end sm:justify-between items-start text-white p-6 sm:pt-16 sm:px-16 z-40  top-0">
       <div className="sm:flex flex-col gap-5 hidden">
-        <div className="space-x-5 ">
+        {/* <div className="space-x-5 ">
           <span>ENG</span>
           <span>PL</span>
-        </div>
+        </div> */}
+        <LanguageChanger/>
         <span className="h-[1px] w-4 bg-white opacity-50"></span>
         <div className="flex flex-col text-2xl gap-3">
           <Link

@@ -4,6 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import NavItem from "./common/NavItem";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import LanguageChanger from "./LanguageChanger";
 const Menu = ({
   setIsActive,
 }: {
@@ -36,10 +37,7 @@ const Menu = ({
       </div>
 
       <div className="absolute bottom-5 text-white w-full flex justify-around">
-        <div className=" space-x-5">
-          <span>ENG</span>
-          <span>PL</span>
-        </div>
+        <LanguageChanger/>
         <span className="h-6 w-[1px] bg-white opacity-50"></span>
         <div className="space-x-5 text-2xl flex">
           <Link
