@@ -12,12 +12,14 @@ import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import Glow from "./common/effects/Glow";
 import { TFunction } from "i18next";
+import { useTranslation } from "react-i18next";
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     margin: "-200px",
     once: true,
   });
+  const { t } = useTranslation();
   return (
     <section id="projects" className="w-full max-w-7xl relative z-0 min-h-screen mx-auto  sm:pt-24 text-white mt-80">
       <Glow className="sm:left-1/2 sm:top-1/2 left-1/2 top-1/2"/>
@@ -39,7 +41,7 @@ const Projects = () => {
           }
           className="text-start lg:pl-36"
         >
-          Selected
+          {t("projects:selected")}
         </motion.span>{" "}
         <motion.span
           initial={{
@@ -54,7 +56,7 @@ const Projects = () => {
           }
           className="text-white text-end lg:pr-36"
         >
-          Projects
+           {t("common:projects")}
         </motion.span>
         <Line />
       </h2>
@@ -64,7 +66,7 @@ const Projects = () => {
           title="Mealfulness"
           stack={mealfulnessStack}
           year="2024"
-          description="Dynamic meal tracking platform integrated with external nutrition API and AI capabilities for personalized meal guidance."
+          description={t("mealfulness:desc")}
           links={MealfulnessLinks}
           image={
             <Image
@@ -86,7 +88,7 @@ const Projects = () => {
           title="WiredWave"
           stack={wiredwaveStack}
           year="2023"
-          description="WiredWave is a e-commerce platform tailored for headphone. This app seamlessly integrates captivating design with advanced functionality to redefine the online headphone shopping experience."
+          description={t("wiredwave:desc")}
           links={WiredWaveLinks}
           image={
             <Image

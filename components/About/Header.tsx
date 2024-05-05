@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const ref = useRef(null);
@@ -9,6 +10,8 @@ const Header = () => {
     once: true,
   });
 
+
+  const { t } = useTranslation();
   return (
     <motion.h2
       initial={{
@@ -24,7 +27,7 @@ const Header = () => {
       ref={ref}
       className="text-[100px] font-semibold  lg:text-[190px]  text-center lg:text-left relative "
     >
-      About
+      {t("common:about")}
     </motion.h2>
   );
 };

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "My personal portfolio",
 };
 
-const i18nNamespaces = ["Home"];
+const i18nNamespaces = ["home", "about", "common","mealfulness","projects","skills","wiredwave", "footer"];
 
 export default async function RootLayout({
   children,

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import codding from "@/assets/codding.webp";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Bio = () => {
   const imgRef = useRef(null);
@@ -15,7 +16,7 @@ const Bio = () => {
     margin: "-100px",
     once: true,
   });
-
+  const { t } = useTranslation();
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
       <div className="order-2 lg:order-1 flex-1 flex justify-center items-center">
@@ -33,7 +34,7 @@ const Bio = () => {
           }
           className="text-lg p-4 "
         >
-          {`Since my days in technical school, I've been deeply involved in coding. I later graduated with a degree in Computer Science and have since committed to coding daily for over 260 days. Taking part in Hackathons has revealed the excitement of working in a team with similar-minded individuals. I'm fueled by tackling new challenges and stretching my abilities. My goal is to become an outstanding Front-end Developer by continuously creating innovative and advanced projects.`}
+          {t("about:bio")}
         </motion.p>
       </div>
       <motion.div

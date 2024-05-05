@@ -20,22 +20,24 @@ import ReactIcon from "./common/Icons/ReactIcon";
 import Jest from "./common/Icons/Jest";
 import Figma from "./common/Icons/Figma";
 import { TFunction } from "i18next";
+import { useTranslation } from "react-i18next";
 const Technologies = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     margin: "-200px",
     once: true,
   });
+  const { t } = useTranslation();
   return (
     <section id="skills" className="w-full max-w-7xl mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
       <h2 className="text-center w-full text-7xl relative lg:text-[140px] mb-36">
-        My Skills
+      {t("skills:header")}
       </h2>
       <div className="flex w-full justify-center items-start gap-8 relative">
         <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl">
           {" "}
           <TechCard
-            title="Programming Languages"
+            title={t("skills:programming_languages")}
             dir="left"
             tech={[
               {
@@ -50,7 +52,7 @@ const Technologies = () => {
           />
           <TechCard
             className="mt-[448px]  sm:mt-80"
-            title="Styling"
+            title={t("skills:styling")}
             dir="left"
             tech={[
               {
@@ -69,7 +71,7 @@ const Technologies = () => {
           />
           <TechCard
             className="mt-[448px] sm:mt-80"
-            title="Database"
+            title={t("skills:database")}
             dir="left"
             tech={[
               {
@@ -106,7 +108,7 @@ const Technologies = () => {
           />
           <TechCard
             className="mt-[468px]   sm:mt-80"
-            title="Testing"
+            title={t("skills:testing")}
             dir="right"
 
             tech={[
@@ -122,7 +124,7 @@ const Technologies = () => {
           />
           <TechCard
             className="mt-[468px] sm:mt-80"
-            title="Design"
+            title={t("skills:design")}
             dir="right"
 
             tech={[

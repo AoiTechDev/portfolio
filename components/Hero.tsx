@@ -31,7 +31,7 @@ const Hero = () => {
           }}
           className="text-center min-[1400px]:text-start text-lg "
         >
-         {t("Home:greetings")}
+         {t("home:greetings")}
         </motion.p>
 
         <h1 className="text-6xl text-start flex flex-col font-bold justify-between gap-4 px-4 min-[1400px]:px-0">
@@ -82,8 +82,7 @@ const Hero = () => {
           }}
           className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start"
         >
-          Step into my digital universe, where pixels come alive and code paints
-          the canvas of innovation, showcasing front-end mastery in every click.
+          {t("home:subheader")}
         </motion.p>
         <motion.div
           initial={{

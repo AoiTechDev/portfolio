@@ -4,6 +4,7 @@ import { WobbleCard } from "../ui/wobble-card";
 import Image from "next/image";
 import programming from "@/assets/programming.jpg";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Cards = () => {
   const firstRef = useRef(null);
@@ -22,6 +23,7 @@ const Cards = () => {
     margin: "100px",
     once: true,
   });
+  const { t } = useTranslation();
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]   mx-auto w-full ">
       <WobbleCard
@@ -43,12 +45,10 @@ const Cards = () => {
           className="max-w-md"
         >
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            1+ Year of Experience
+            {t("about:exp_header")}
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With a foundation in technology and programming studies, I offer one
-            year of internship experience along with consistent engagement in
-            events, workshops, and daily coding activities.{" "}
+          {t("about:exp_desc")}
           </p>
         </motion.div>
       </WobbleCard>
@@ -67,11 +67,11 @@ const Cards = () => {
           ref={secRef}
         >
           <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            10+ Projects
+          {t("about:projects_header")}
+
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            I have worked on many projects, both on my own and with teams during
-            hackathons.{" "}
+          {t("about:projects_desc")}
           </p>
         </motion.div>
       </WobbleCard>
@@ -91,10 +91,11 @@ const Cards = () => {
           className="max-w-sm"
         >
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            True passion for creating interfaces
+          {t("about:passion_header")}
+
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            Beeing a front-end developer gives me great joy and possibilities to do what I truly love.
+          {t("about:passion_desc")}
           </p>
         </motion.div>
         <Image
