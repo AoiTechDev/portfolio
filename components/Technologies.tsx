@@ -24,17 +24,32 @@ import { useTranslation } from "react-i18next";
 const Technologies = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    margin: "-200px",
+    margin: "-100px",
     once: true,
   });
   const { t } = useTranslation();
   return (
-    <section id="skills" className="w-full max-w-7xl min-h-[300vh] mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32">
-      <h2 className="text-center w-full text-7xl relative lg:text-[140px] mb-36">
-      {t("skills:header")}
-      </h2>
+    <section
+      id="skills"
+      className="w-full max-w-7xl min-h-[300vh] mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32"
+    >
+      <motion.h2
+        initial={{
+          opacity: 0,
+          y: 100,
+        }}
+        animate={
+          isInView && {
+            opacity: 1,
+            y: 0,
+          }
+        }
+        ref={ref}
+        className="text-center w-full text-7xl relative lg:text-[140px] mb-36"
+      >
+        {t("skills:header")}
+      </motion.h2>
       <div className="flex w-full justify-center items-start gap-8 relative">
-        
         <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl pr-4">
           {" "}
           <TechCard
@@ -111,7 +126,6 @@ const Technologies = () => {
             className="mt-[468px]   sm:mt-80"
             title={t("skills:testing")}
             dir="right"
-
             tech={[
               {
                 name: "Jest",
@@ -127,7 +141,6 @@ const Technologies = () => {
             className="mt-[468px] sm:mt-80"
             title={t("skills:design")}
             dir="right"
-
             tech={[
               {
                 name: "Adobe XD",
