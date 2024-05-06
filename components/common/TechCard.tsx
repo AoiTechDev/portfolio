@@ -34,7 +34,7 @@ const TechCard = ({
       )}
     >
       <div className="bg-background w-full my-4 rounded-2xl techCardShadow">
-        <h4 className="text-2xl text-center my-8">{title}</h4>
+        <h3 className="text-2xl text-center my-8">{title}</h3>
       </div>
 
       {tech.map((item) => (

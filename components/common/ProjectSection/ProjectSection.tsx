@@ -96,7 +96,7 @@ const ProjectSection = ({
           <p className="text-lg">{description}</p>
         </MotionComponent>
 
-        <ul className="flex gap-6">
+        <div className="flex gap-6">
           {links.map((link, index) => (
             <MotionComponent
               inView={isInView}
@@ -105,13 +105,13 @@ const ProjectSection = ({
               y={50}
             >
               <Link href={link.href} target="_blank">
-                <li className="py-2 px-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md ">
+                <span className="py-2 px-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-md ">
                   {link.label}
-                </li>
+                </span>
               </Link>
             </MotionComponent>
           ))}
-        </ul>
+        </div>
 
         {/* <MotionComponent delay={0.5}>{details}</MotionComponent> */}
       </div>
