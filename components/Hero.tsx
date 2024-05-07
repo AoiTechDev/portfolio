@@ -10,7 +10,7 @@ import Image from "next/image";
 import programming from "@/assets/programming.svg";
 import Glow from "./common/effects/Glow";
 import { useMediaQuery } from "@mui/material";
-import { TFunction } from "i18next";
+
 import { useTranslation } from "react-i18next";
 const Hero = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
@@ -122,18 +122,7 @@ const Hero = () => {
       >
         <Image priority src={programming} alt="programming" width={700} />
       </motion.div>
-      {/* <motion.div
-        initial={{
-          scale: 0,
-        }}
-        animate={{
-          scale: 1,
-        }}
-        transition={{
-          delay: 0.6,
-        }}
-        className="h-[150px] min-[1400px]:h-[300px] w-[1px] absolute top-[400px] sm:top-[250px] left-[50%] -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500"
-      ></motion.div> */}
+
     </main>
   );
 };

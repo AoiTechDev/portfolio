@@ -2,29 +2,15 @@
 import React from "react";
 
 import { FaLinkedin } from "react-icons/fa";
-import TextField from "@mui/material/TextField";
-import Blob from "./svg/blob";
-import { InputLabel, TextareaAutosize } from "@mui/material";
+
 
 const Contact = () => {
   return (
     <div className="w-full max-w-[1800px] min-h-screen flex  flex-col min-[1400px]:flex-row justify-center gap-12 min-[1400px]:justify-center items-center text-white my-32">
       <div className=" order-2 min-[1400px]:order-1 min-[1400px]:flex-1 text-white flex justify-center items-center relative w-full">
-        <Blob />
-        <div className="absolute flex flex-col gap-6 lg:w-[300px]">
-          <TextField id="standard-basic" label="Your Name" variant="standard" />
-          <TextField
-            id="standard-basic"
-            label="Your Email"
-            variant="standard"
-          />
-          <TextField
-            id="standard-multiline-flexible"
-            label="Share your thoughts"
-            multiline
-            maxRows={20}
-            variant="standard"
-          />
+       
+        <div className="absolute flex flex-col gap-6 lg:w-[300px] bg-white">
+         
         </div>
       </div>
       <div className="order-1 min-[1400px]:order-2 min-[1400px]:flex-1 flex-col min-[1400px]:h-screen  flex items-center  justify-around ">
