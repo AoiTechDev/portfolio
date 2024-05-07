@@ -16,6 +16,7 @@
     "@nextui-org/system": "^2.1.2",
     "@nextui-org/theme": "^2.2.3",
     "@octokit/core": "^6.1.2",
+    "@radix-ui/react-label": "^2.0.2",
     "@uidotdev/usehooks": "^2.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

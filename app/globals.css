@@ -2,6 +2,61 @@
   @tailwind components;
   @tailwind utilities;
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .stackText::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    right: -20px;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .path {
+    stroke-dasharray: 0; /* zostanie zaktualizowane za pomocą JavaScript */
+    stroke-dashoffset: 0; /* zostanie zaktualizowane za pomocą JavaScript */
+    /* animation: draw 5s linear forwards; */
+    opacity: 0;
+  }
+  
+  .aboutHeader::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .techCardShadow {
+    -webkit-box-shadow: 13px 16px 50px 7px #151515;
+    -moz-box-shadow: 13px 16px 50px 7px #151515;
+    box-shadow: 13px 16px 50px 7px #151515;
+  }
+  
+  @media (max-width: 640px) {
+    .glass {
+      /* From https://css.glass */
+  
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10.8px);
+      -webkit-backdrop-filter: blur(10.8px);
+    }
+  }
+  
   @layer base {
     :root {
       --background: 0 0% 100%;
@@ -74,3 +129,4 @@
       @apply bg-background text-foreground;
     }
   }
+  
