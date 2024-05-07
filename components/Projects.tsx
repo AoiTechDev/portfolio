@@ -7,7 +7,7 @@ import Link from "next/link";
 import ProjectSection from "./common/ProjectSection/ProjectSection";
 import { MealfulnessLinks, WiredWaveLinks } from "@/constants/links";
 import { mealfulnessStack, wiredwaveStack } from "@/constants/stack";
-import Line from "./line";
+import Line from "./svg/line";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import Glow from "./common/effects/Glow";

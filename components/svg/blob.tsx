@@ -14,8 +14,8 @@ const Blob = () => {
       <defs>
        
         <linearGradient id="SvgjsLinearGradient1001">
-          <stop stop-color="hsl(277, 66%, 63%)" offset="0"></stop>
-          <stop stop-color="hsl(245, 71%, 52%)" offset="1"></stop>
+          <stop stopColor="hsl(277, 66%, 63%)" offset="0"></stop>
+          <stop stopColor="hsl(245, 71%, 52%)" offset="1"></stop>
         </linearGradient>
       </defs>
     </svg>

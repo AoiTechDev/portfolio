@@ -3,7 +3,7 @@ import React from "react";
 
 import { FaLinkedin } from "react-icons/fa";
 import TextField from "@mui/material/TextField";
-import Blob from "./blob";
+import Blob from "./svg/blob";
 import { InputLabel, TextareaAutosize } from "@mui/material";
 
 const Contact = () => {
