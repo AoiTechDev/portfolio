@@ -45,7 +45,7 @@ const Technologies = () => {
           }
         }
         ref={ref}
-        className="text-center w-full text-7xl relative lg:text-[140px] mb-36"
+        className="text-center w-full font-semibold text-7xl relative lg:text-[140px] mb-36"
       >
         {t("skills:header")}
       </motion.h2>
