@@ -21,6 +21,7 @@ import Jest from "./common/Icons/Jest";
 import Figma from "./common/Icons/Figma";
 import { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
+import Arrow from "./svg/arrow";
 const Technologies = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -33,6 +34,7 @@ const Technologies = () => {
       id="skills"
       className="w-full max-w-7xl min-h-[300vh] mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32"
     >
+      <Arrow/>
       <motion.h2
         initial={{
           opacity: 0,
@@ -48,6 +50,7 @@ const Technologies = () => {
         className="text-center w-full font-semibold text-7xl relative lg:text-[140px] mb-36"
       >
         {t("skills:header")}
+        
       </motion.h2>
       <div className="flex w-full justify-center items-start gap-8 relative">
         <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl pr-4">
