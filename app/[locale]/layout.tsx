@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 const i18nNamespaces = [
+  "Home",
   "home",
   "about",
   "common",
