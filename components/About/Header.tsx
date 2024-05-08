@@ -25,7 +25,7 @@ const Header = () => {
         }
       }
       ref={ref}
-      className="text-[100px] font-semibold  lg:text-[190px]  text-center lg:text-left relative "
+      className="text-[60px] font-semibold  lg:text-[190px]  text-center lg:text-left relative "
     >
       {t("common:about")}
     </motion.h2>
