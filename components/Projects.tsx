@@ -1,25 +1,35 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import mealfulnessLandpageMock from "@/assets/landpage-mobile-portrait.png";
 import wiredwaveLandpageMock from "@/assets/wiredwave-landpage-portrait.png";
+import clearflowMock from "@/assets/mock_clearflow.png";
+import aifredMock from "@/assets/mock_aifred.png";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectSection from "./common/ProjectSection/ProjectSection";
-import { MealfulnessLinks, WiredWaveLinks } from "@/constants/links";
-import { mealfulnessStack, wiredwaveStack } from "@/constants/stack";
+import { aifredLink, clearFlowLink, MealfulnessLinks, WiredWaveLinks } from "@/constants/links";
+import { aifredStack, clearflowStack, mealfulnessStack, wiredwaveStack } from "@/constants/stack";
 import Line from "./svg/line";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import Glow from "./common/effects/Glow";
-import { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 const Projects = () => {
+  const [active, setActive] = useState("personal");
+
+  const handleActive = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const textContent = e.currentTarget.textContent;
+    if (textContent) {
+      setActive(textContent.toLowerCase());
+    }
+  };
   const ref = useRef(null);
   const isInView = useInView(ref, {
     margin: "-200px",
     once: true,
   });
   const { t } = useTranslation();
+
   return (
     <section
       id="projects"
@@ -64,51 +74,121 @@ const Projects = () => {
         <Line />
       </h2>
 
-      <div className="space-y-32 mt-32">
-        <ProjectSection
-          title="Mealfulness"
-          stack={mealfulnessStack}
-          year="2024"
-          description={t("mealfulness:desc")}
-          links={MealfulnessLinks}
-          image={
-            <Image
-              fill
-              src={mealfulnessLandpageMock}
-              alt="mealfulness landing page"
-              className="object-contain"
-            />
-          }
-          order={1}
-          details={
-            <div className="uppercase ">
-              <Link href="/projects/mealfulness">View project details</Link>
-            </div>
-          }
-        />
-
-        <ProjectSection
-          title="WiredWave"
-          stack={wiredwaveStack}
-          year="2023"
-          description={t("wiredwave:desc")}
-          links={WiredWaveLinks}
-          image={
-            <Image
-              fill
-              src={wiredwaveLandpageMock}
-              alt="mealfulness landing page"
-              className="object-contain"
-            />
-          }
-          order={2}
-          details={
-            <div className="uppercase ">
-              <Link href="/projects/wiredwave">View project details</Link>
-            </div>
-          }
-        />
+      <div className="flex w-full justify-center items-center gap-6 sm:gap-12 text-2xl sm:text-4xl my-24">
+        <button
+          onClick={handleActive}
+          className={`${
+            active === "personal"
+              ? "bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text text-2xl"
+              : "opacity-50 text-lg"
+          }  cursor-pointer `}
+        >
+          Personal
+        </button>
+        <button
+          onClick={handleActive}
+          className={`${
+            active === "hackathon"
+              ? "bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text text-2xl"
+              : "opacity-50 text-lg"
+          }  cursor-pointer `}
+        >
+          Hackathon
+        </button>
       </div>
+      {active === "personal" ? (
+        <div className="space-y-32 mt-32">
+          <ProjectSection
+            title="Mealfulness"
+            stack={mealfulnessStack}
+            year="2024"
+            description={t("mealfulness:desc")}
+            links={MealfulnessLinks}
+            image={
+              <Image
+                fill
+                src={mealfulnessLandpageMock}
+                alt="mealfulness landing page"
+                className="object-contain"
+              />
+            }
+            order={1}
+            details={
+              <div className="uppercase ">
+                <Link href="/projects/mealfulness">View project details</Link>
+              </div>
+            }
+          />
+
+          <ProjectSection
+            title="WiredWave"
+            stack={wiredwaveStack}
+            year="2023"
+            description={t("wiredwave:desc")}
+            links={WiredWaveLinks}
+            image={
+              <Image
+                fill
+                src={wiredwaveLandpageMock}
+                alt="mealfulness landing page"
+                className="object-contain"
+              />
+            }
+            order={2}
+            details={
+              <div className="uppercase ">
+                <Link href="/projects/wiredwave">View project details</Link>
+              </div>
+            }
+          />
+        </div>
+      ) : (
+        <div className="space-y-32 mt-32">
+          <ProjectSection
+            title="ClearFlow"
+            stack={clearflowStack}
+            year="48h"
+            description={t("clearflow:desc")}
+            links={clearFlowLink}
+            image={
+              <Image
+                fill
+                src={clearflowMock}
+                alt="mealfulness landing page"
+                className="object-contain"
+              />
+            }
+            order={1}
+            details={
+              <div className="uppercase ">
+                <Link href="/projects/mealfulness">View project details</Link>
+              </div>
+            }
+          />
+
+          <ProjectSection
+            title="Aifred"
+            stack={aifredStack}
+            year="48h"
+            description={t("aifred:desc")}
+            links={aifredLink}
+            image={
+              <Image
+                fill
+                src={aifredMock}
+                alt="mealfulness landing page"
+                className="object-contain"
+              />
+            }
+            order={2}
+            details={
+              <div className="uppercase ">
+                <Link href="/projects/wiredwave">View project details</Link>
+              </div>
+            }
+          />
+        </div>
+      )}
     </section>
   );
 };

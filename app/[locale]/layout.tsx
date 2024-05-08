@@ -13,12 +13,29 @@ const inter = Poppins({
 
 export const metadata: Metadata = {
   title: "PBornikowski",
-  description: "Front-end developer with 2 years of experience and strong passion for creating interfaces.",
-  applicationName: 'PBornikowski',
-  authors: [{name:'Paweł Bornikowski', url:'https://www.linkedin.com/in/pbornikowski/'}]
+  description:
+    "Front-end developer with 2 years of experience and strong passion for creating interfaces.",
+  applicationName: "PBornikowski",
+  authors: [
+    {
+      name: "Paweł Bornikowski",
+      url: "https://www.linkedin.com/in/pbornikowski/",
+    },
+  ],
 };
 
-const i18nNamespaces = ["home", "about", "common","mealfulness","projects","skills","wiredwave", "footer"];
+const i18nNamespaces = [
+  "home",
+  "about",
+  "common",
+  "mealfulness",
+  "projects",
+  "skills",
+  "wiredwave",
+  "footer",
+  "aifred",
+  "clearflow",
+];
 
 export default async function RootLayout({
   children,
