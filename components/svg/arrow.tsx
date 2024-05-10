@@ -1,7 +1,27 @@
-import React from "react";
+import { useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const Arrow = () => {
   // Define the path coordinates of the arrow
+
+  const pathRef = useRef<SVGPathElement | null>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: "-200px",
+    once: true,
+  });
+  useEffect(() => {
+    const path = pathRef.current;
+    if (isInView && path) {
+      const length = path.getTotalLength();
+      if (path.style) {
+        path.style.opacity = "1";
+        path.style.strokeDasharray = String(length);
+        path.style.strokeDashoffset = String(length);
+        path.style.animation = "draw 1s linear forwards";
+      }
+    }
+  }, [isInView]);
 
   return (
     <svg
@@ -9,6 +29,7 @@ const Arrow = () => {
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 800 800"
+      ref={ref}
     >
       <defs>
         <linearGradient id="SvgjsLinearGradient1003">
@@ -25,6 +46,7 @@ const Arrow = () => {
         transform="rotate(25, 400, 400)"
       >
         <path
+          ref={pathRef}
           d="M176.2177734375 245.37613677978516Q774.2177734375 -48.623863220214844 573.2177734375 642.3761367797852 "
           marker-end="url(#SvgjsMarker1907)"
         ></path>
