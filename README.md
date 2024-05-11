@@ -1,6 +1,6 @@
 # My Personal Portfolio
 
-For now it is just MVP with miniamal info. I will develop it in time.
+For now it is just MVP with miniamal info. I will develop this in time.
 
 ## Tech Stack
 
