@@ -2,6 +2,7 @@
 
 For now it is just MVP with miniamal info. I will develop this in time.
 
+
 ## Tech Stack
 
 - Next.js
