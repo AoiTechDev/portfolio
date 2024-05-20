@@ -3,6 +3,7 @@ import React from "react";
 
 import { MdArrowOutward } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+
 const Contact = () => {
   const { t } = useTranslation();
   return (
@@ -18,10 +19,12 @@ const Contact = () => {
       </h2>
 
       <p className="opacity-60 text-center"> {t('contact:reach')}</p>
-      <button className="py-4 px-8 rounded-xl bg-transparent flex gap-4 border-[#282828] border-[1px] justify-center relative items-center z-0 ">
+      <a href="mailto:pawel.bornikowski@gmail.com" target="_blank">
+      <button className="py-4 px-8 rounded-xl bg-transparent flex gap-4 border-[#282828] border-[1px] justify-center relative items-center z-0 " >
         <span className="absolute   opacity-40 top-0 w-full h-full -z-10 bg-gradient-to-r from-[#1e1e1e] to-[#282828] "></span>
         {t('contact:contact')} <MdArrowOutward className="text-xl" />
       </button>
+      </a>
     </section>
   );
 };

@@ -38,17 +38,17 @@ const Arrow = () => {
         </linearGradient>
       </defs>
       <g
-        stroke-width="15"
+        strokeWidth="15"
         stroke="url(#SvgjsLinearGradient1003)"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         transform="rotate(25, 400, 400)"
       >
         <path
           ref={pathRef}
           d="M176.2177734375 245.37613677978516Q774.2177734375 -48.623863220214844 573.2177734375 642.3761367797852 "
-          marker-end="url(#SvgjsMarker1907)"
+          markerEnd="url(#SvgjsMarker1907)"
         ></path>
       </g>
       <defs>
@@ -64,11 +64,11 @@ const Arrow = () => {
           <polyline
             points="0,5 5,2.5 0,0"
             fill="none"
-            stroke-width="1.6666666666666667"
+            strokeWidth="1.6666666666666667"
             stroke="hsl(245, 71%, 52%)"
-            stroke-linecap="round"
+            strokeLinecap="round"
             transform="matrix(1,0,0,1,1.6666666666666667,2.5)"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></polyline>
         </marker>
       </defs>
