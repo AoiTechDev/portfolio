@@ -37,6 +37,7 @@ const i18nNamespaces = [
   "footer",
   "aifred",
   "clearflow",
+  'contact'
 ];
 
 export default async function RootLayout({

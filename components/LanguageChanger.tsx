@@ -5,9 +5,10 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import i18nConfig from "@/i18nConfig";
 import { useRef } from "react";
+import { cn } from "@/lib/utils";
 
 const lang = ["en", "pl"];
-export default function LanguageChanger() {
+export default function LanguageChanger({ className }: { className?: string }) {
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function LanguageChanger() {
 
   const handleChange = (index: number) => {
     const newLocale = langRefs.current[index]?.textContent;
-   
+
     // set cookie for next-i18n-router
     const days = 30;
     const date = new Date();
@@ -40,10 +41,10 @@ export default function LanguageChanger() {
   };
 
   return (
-    <div className="uppercase space-x-5 ">
+    <div className={cn("uppercase  ", className)}>
       {lang.map((lang, index) => (
         <span
-        className="cursor-pointer hover:opacity-60 duration-200"
+          className="cursor-pointer opacity-60 hover:opacity-30 duration-200"
           ref={(e) => {
             if (!langRefs.current[index]) {
               langRefs.current[index] = e;
