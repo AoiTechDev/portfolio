@@ -29,6 +29,7 @@
     stroke-dashoffset: 0; /* zostanie zaktualizowane za pomocą JavaScript */
     /* animation: draw 5s linear forwards; */
     opacity: 0;
+
   }
   
   .aboutHeader::before {
