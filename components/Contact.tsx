@@ -8,64 +8,26 @@ import { Textarea } from "@/components/ui/textarea";
 import { FaPhone } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { IoMdPin } from "react-icons/io";
+import { MdArrowOutward } from "react-icons/md";
 const Contact = () => {
   return (
-    <div className="w-full h-screen min-h-screen flex  flex-col min-[1400px]:flex-row justify-center gap-12 min-[1400px]:justify-center items-center text-white my-32">
-      <div className=" min-[1400px]:flex-1  min-[1400px]:h-screen  flex items-center justify-center ">
-        <div className="flex flex-col justify-center gap-12 items-start h-3/4">
-          <div className="">
-            <h2 className="text-8xl">Contact</h2>
-            <div className="flex gap-2 justify-center items-center">
-              <div className="h-[3px] w-64 bg-white"></div>
-              <h2 className="text-8xl">Me</h2>
-            </div>
-          </div>
-          <div className="flex gap-4 justify-center items-center text-xl">
-            <div className=" rounded-full w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 flex justify-center items-center">
-              <FaPhone className="text-3xl" />
-            </div>
-            <span>+48 533 502 111</span>
-          </div>
-          <div className="flex gap-4 justify-center items-center text-xl">
-            <div className=" rounded-full w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 flex justify-center items-center">
-              <IoIosMail className="text-3xl" />
-            </div>
-            <span>pawel.bornikowski@gmail.com</span>
-          </div>
-          <div className="flex gap-4 justify-center items-center text-xl">
-            <div className=" rounded-full w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 flex justify-center items-center">
-              <IoMdPin className="text-3xl" />
-            </div>
+    <section className="h-[50vh] max-w-[1600px] w-full mx-auto z-0 relative mt-32 flex justify-center items-center flex-col text-white gap-8">
+      <div className="absolute w-1/2 h-full bg-grid-white/[0.05] left-1/2 -translate-x-1/2"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+      <h2 className="text-5xl text-balance text-center w-full max-w-2xl">
+        Ready to take{" "}
+        <span className="bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text">
+          your
+        </span>{" "}
+        digital presence to the next level?
+      </h2>
 
-            <span>Poland, Wrocław</span>
-          </div>
-         
-        </div>
-      </div>
-      <div className=" min-[1400px]:flex-1 text-white flex justify-center items-center  h-screen w-full">
-        <form className="w-1/2 space-y-10">
-          <div>
-            <Label>Your Name</Label>
-            <Input />
-          </div>
-          <div>
-            <Label>Your Email</Label>
-            <Input />
-          </div>
-          <div>
-            <Label>Subject</Label>
-            <Input />
-          </div>
-          <div>
-            <Label>Leave me a message</Label>
-            <Textarea />
-          </div>
-          <button className="bg-gradient-to-r from-purple-500 to-indigo-500 w-full py-3 rounded-lg">
-            Send
-          </button>
-        </form>
-      </div>
-    </div>
+      <p className="opacity-60">{`Reach out to me today and let's discuss how I can help you achieve your goals.`}</p>
+      <button className="py-4 px-8 rounded-xl bg-transparent flex gap-4 border-[#282828] border-[1px] justify-center relative items-center z-0 ">
+        <span className="absolute   opacity-40 top-0 w-full h-full -z-10 bg-gradient-to-r from-[#1e1e1e] to-[#282828] "></span>
+        Contact Me Now <MdArrowOutward className="text-xl" />
+      </button>
+    </section>
   );
 };
 

@@ -110,7 +110,7 @@ const Hero = () => {
           transition={{
             delay: 0.6,
           }}
-          className="flex justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl"
+          className="flex z-40 justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl"
         >
           <FaReact />
           <SiNextdotjs />

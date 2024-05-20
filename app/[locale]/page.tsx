@@ -11,7 +11,7 @@ export default async function Home() {
       <About />
       <Projects />
       <Technologies />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }
