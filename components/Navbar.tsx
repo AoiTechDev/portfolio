@@ -42,7 +42,7 @@ const Navbar = ({ className }: { className?: string }) => {
     //   {isActive ? <Menu setIsActive={setIsActive} /> : null}
     // </nav>
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-xl mx-auto z-50", className)}
+      className={cn("fixed top-6 inset-x-6 lg:inset-x-0 max-w-xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={null} item="About" />

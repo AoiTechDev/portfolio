@@ -30,7 +30,7 @@ export const MenuItem = ({
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
       >
-        {item}
+        <Link href={`#${item.toLowerCase()}`}>{item}</Link>
       </motion.p>
       {active !== null && (
         <motion.div

@@ -12,12 +12,25 @@ import Glow from "./common/effects/Glow";
 import { useMediaQuery } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
+import { Spotlight } from "./ui/Spotlight";
 const Hero = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   const { t } = useTranslation();
   return (
-    <main className="w-full max-w-[1600px] min-h-[100vh] mx-auto bg-grid-white/[0.05]  text-white   flex min-[1400px]:flex-row flex-col antialiased    items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4 sm:p-8">
+    <main className="w-full max-w-[1600px] min-h-[100vh] pt-24 mx-auto bg-grid-white/[0.05]  text-white   flex min-[1400px]:flex-row flex-col antialiased    items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4 sm:p-8">
+      <Spotlight
+        className="hidden lg:block -top-[600px] -left-[700px] opacity-50"
+        fill="white"
+      />
+       <Spotlight
+        className="hidden lg:block  -top-[500px] -left-[1200px] opacity-50"
+        fill="white"
+      />
+        <Spotlight
+        className="hidden lg:block  -top-[700px] -right-[900px] rotate-90 opacity-50"
+        fill="white"
+      />
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <Glow className="top-3/4 left-1/2 z-20" />
       <div className="min-[1400px]:flex-1 flex justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
