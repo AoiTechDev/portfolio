@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "@/components/Footer";
 import TranslationsProvider from "@/components/Providers/TranslationProvider";
 import initTranslations from "../i18n";
+import { Menu } from "@/components/ui/navbar-menu";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -56,8 +57,9 @@ export default async function RootLayout({
       <html style={{ scrollBehavior: "smooth" }} lang={locale}>
         <body className={`${inter.className} bg-background`}>
           <Navbar />
-          <div id="burger"></div>
-          <div id="menu"></div>
+       
+          {/* <div id="burger"></div>
+          <div id="menu"></div> */}
 
           {children}
           <Footer />

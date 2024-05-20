@@ -17,7 +17,7 @@ const Hero = () => {
 
   const { t } = useTranslation();
   return (
-    <main className="w-full max-w-[1600px]  min-h-[60vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4 sm:p-8">
+    <main className="w-full max-w-[1600px]  min-h-[100vh] mx-auto   text-white   flex min-[1400px]:flex-row flex-col items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4 sm:p-8">
 
       <Glow className="top-3/4 left-1/2" />
       <div className="min-[1400px]:flex-1 flex justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
