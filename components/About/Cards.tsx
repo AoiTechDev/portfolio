@@ -5,6 +5,8 @@ import Image from "next/image";
 import programming from "@/assets/programming.jpg";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Glow from "../common/effects/Glow";
+import RadialBlur from "../common/effects/radial-blur";
 
 const Cards = () => {
   const firstRef = useRef(null);
@@ -25,9 +27,11 @@ const Cards = () => {
   });
   const { t } = useTranslation();
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]   mx-auto w-full ">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]  bg-grid-white/[0.1] relative  z-0 mx-auto w-full ">
+      {/* <Glow className="sm:left-0 sm:-top-[200px] opacity-55 z-10 " /> */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black -z-10 bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[300px] sm:min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1   lg:col-span-2 h-full  z-20 min-h-[300px] sm:min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <motion.div
@@ -42,17 +46,17 @@ const Cards = () => {
             }
           }
           ref={firstRef}
-          className="max-w-md"
+          className="max-w-md pl-6"
         >
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             {t("about:exp_header")}
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-          {t("about:exp_desc")}
+            {t("about:exp_desc")}
           </p>
         </motion.div>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 relative z-20 min-h-[300px]">
         <motion.div
           initial={{
             opacity: 0,
@@ -67,15 +71,14 @@ const Cards = () => {
           ref={secRef}
         >
           <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          {t("about:projects_header")}
-
+            {t("about:projects_header")}
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          {t("about:projects_desc")}
+            {t("about:projects_desc")}
           </p>
         </motion.div>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-gradient-to-r from-indigo-700 to-purple-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 z-20 relative lg:col-span-3 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <motion.div
           initial={{
             opacity: 0,
@@ -91,11 +94,10 @@ const Cards = () => {
           className="max-w-sm"
         >
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          {t("about:passion_header")}
-
+            {t("about:passion_header")}
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          {t("about:passion_desc")}
+            {t("about:passion_desc")}
           </p>
         </motion.div>
         <Image

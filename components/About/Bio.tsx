@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import codding from "@/assets/codding.webp";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Noise, WobbleCard } from "../ui/wobble-card";
+import RadialBlur from "../common/effects/radial-blur";
 
 const Bio = () => {
   const imgRef = useRef(null);
@@ -19,8 +21,8 @@ const Bio = () => {
   const { t } = useTranslation();
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
-      <div className="order-2 lg:order-1 flex-1 flex justify-center items-center">
-        <motion.p
+      <div className="order-2 lg:order-1  flex-1 gap-10 flex h-full flex-col">
+        {/* <motion.p
           ref={pRef}
           initial={{
             opacity: 0,
@@ -35,7 +37,19 @@ const Bio = () => {
           className="text-lg p-4 "
         >
           {t("about:bio")}
-        </motion.p>
+        </motion.p> */}
+        <WobbleCard className=" h-full min-h-[280px] bg-grid-white/[0.1]  flex justify-center items-center     rounded-2xl">
+          <RadialBlur />
+          <p className="text-3xl font-semibold text-center">
+            Tech enthusiast with a passion for development
+          </p>
+        </WobbleCard>
+        <WobbleCard className=" h-full min-h-[280px] rounded-2xl flex justify-center items-center bg-grid-white/[0.1]">
+          <RadialBlur />
+          <p className="text-3xl font-semibold text-center">
+            Tech enthusiast with a passion for development
+          </p>
+        </WobbleCard>
       </div>
       <motion.div
         ref={imgRef}
@@ -46,9 +60,11 @@ const Bio = () => {
             scale: 1,
           }
         }
-        className="order-1 lg:order-2 w-[400px] lg:w-[600px] flex-1 flex justify-end items-end"
+        className="order-1 rounded-2xl overflow-hidden relative lg:order-2 w-[400px] lg:w-[800px] h-[600px]  flex justify-center bg-gradient-to-r from-purple-600 to-indigo-500 items-center"
       >
-        <Image src={codding} alt="" className="rounded-xl" />
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+        <Noise />
+        <Image src={codding} alt="" className=" " />
       </motion.div>
     </div>
   );
