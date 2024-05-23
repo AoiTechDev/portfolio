@@ -19,7 +19,7 @@ const Hero = () => {
 
   const { t } = useTranslation();
   return (
-    <main className="w-full max-w-[1600px] min-h-[100vh] pt-24 mx-auto bg-grid-white/[0.05]  text-white   flex min-[1400px]:flex-row flex-col antialiased    items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4 sm:p-8">
+    <main id="home" className="w-full max-w-[1600px] min-h-[100vh] pt-24 mx-auto bg-grid-white/[0.05]  text-white   flex min-[1400px]:flex-row flex-col antialiased    items-center relative mt-24 mb-48 lg:mt-0 z-0 p-4 sm:p-8">
       <Spotlight
         className="hidden lg:block -top-[600px] -left-[700px] opacity-50"
         fill="white"
