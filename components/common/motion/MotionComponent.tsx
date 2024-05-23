@@ -5,6 +5,7 @@ import {
   motion,
   Target,
   TargetAndTransition,
+  Transition,
   useInView,
   VariantLabels,
 } from "framer-motion";
@@ -15,12 +16,14 @@ const MotionComponent = ({
   margin,
   initial,
   animate,
+  transition
 }: {
   children: React.ReactNode;
   className?: string;
   margin?: string;
   initial?: boolean | Target | VariantLabels;
   animate?: AnimationControls | TargetAndTransition | VariantLabels | boolean;
+  transition?: Transition;
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const containerIsInView = useInView(containerRef, {
@@ -33,7 +36,7 @@ const MotionComponent = ({
       initial={
         initial || {
           opacity: 0,
-          y: 200,
+          y: 100,
         }
       }
       animate={
@@ -43,6 +46,7 @@ const MotionComponent = ({
           y: 0,
         })
       }
+      transition={transition}
       ref={containerRef}
     >
       {children}

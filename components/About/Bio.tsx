@@ -8,6 +8,7 @@ import { Noise, WobbleCard } from "../ui/wobble-card";
 import RadialBlur from "../common/effects/radial-blur";
 import GradientText from "../common/effects/gradient-text";
 import { GetLocaleFromStorage } from "@/hooks/getLocaleFromStorage";
+import MotionComponent from "../common/motion/MotionComponent";
 
 const Bio = () => {
   const { t } = useTranslation();
@@ -19,35 +20,43 @@ const Bio = () => {
       <div className="order-2 lg:order-1  flex-1 gap-10 flex h-full flex-col">
         <WobbleCard className=" h-full min-h-[180px] sm:min-h-[250px] bg-grid-white/[0.05]  flex justify-center items-center     rounded-2xl">
           <RadialBlur />
-          <p className="text-2xl sm:text-3xl font-semibold text-balance text-start">
-            {locale === "en" ? (
-              <>
-                {t("about:tech")} <GradientText text={t("about:enthusiast")} />{" "}
-              </>
-            ) : (
-              <>
-                <GradientText text={t("about:enthusiast")} /> {t("about:tech")}
-              </>
-            )}{" "}
-            {t("about:tect_passion")}
-          </p>
+          <MotionComponent>
+            <p className="text-2xl sm:text-3xl font-semibold text-balance text-start">
+              {locale === "en" ? (
+                <>
+                  {t("about:tech")}{" "}
+                  <GradientText text={t("about:enthusiast")} />{" "}
+                </>
+              ) : (
+                <>
+                  <GradientText text={t("about:enthusiast")} />{" "}
+                  {t("about:tech")}
+                </>
+              )}{" "}
+              {t("about:tect_passion")}
+            </p>
+          </MotionComponent>
         </WobbleCard>
         <WobbleCard className=" h-full min-h-[180px] sm:min-h-[250px] rounded-2xl relative bg-grid-white/[0.05]">
           <RadialBlur />
-          <p className="uppercase font-mono">{t("about:scoop")}</p>
-          <p className="text-2xl sm:text-3xl  font-semibold  text-start bottom-4 left-4 text-balance">
-            {t("about:matchmaking")}{" "}
-            <GradientText text={t("about:hackathon")} />
-          </p>
+          <MotionComponent>
+            <p className="uppercase font-mono">{t("about:scoop")}</p>
+            <p className="text-2xl sm:text-3xl  font-semibold  text-start bottom-4 left-4 text-balance">
+              {t("about:matchmaking")}{" "}
+              <GradientText text={t("about:hackathon")} />
+            </p>
+          </MotionComponent>
         </WobbleCard>
       </div>
       <div className="order-1 rounded-2xl overflow-hidden relative lg:order-2   flex justify-center items-center">
         <RadialBlur />
-        <p className="text-2xl sm:text-3xl absolute font-semibold  text-start bottom-4 sm:bottom-10 left-4 sm:left-6 text-balance">
-          {t("about:priority1")} <GradientText text={t("about:colab")} />{" "}
-          {t("about:priority2")}{" "}
-          <GradientText text={t("about:communication")} />
-        </p>
+        <MotionComponent className="absolute bottom-4 sm:bottom-10 left-4 sm:left-6">
+          <p className="text-2xl sm:text-3xl  font-semibold  text-start  text-balance">
+            {t("about:priority1")} <GradientText text={t("about:colab")} />{" "}
+            {t("about:priority2")}{" "}
+            <GradientText text={t("about:communication")} />
+          </p>
+        </MotionComponent>
         <Image src={codding} alt="" className=" " />
       </div>
     </div>
