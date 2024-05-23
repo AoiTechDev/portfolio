@@ -22,22 +22,6 @@ const Bio = () => {
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
       <div className="order-2 lg:order-1  flex-1 gap-10 flex h-full flex-col">
-        {/* <motion.p
-          ref={pRef}
-          initial={{
-            opacity: 0,
-            y: 100,
-          }}
-          animate={
-            pIsInView && {
-              opacity: 1,
-              y: 0,
-            }
-          }
-          className="text-lg p-4 "
-        >
-          {t("about:bio")}
-        </motion.p> */}
         <WobbleCard className=" h-full min-h-[280px] bg-grid-white/[0.05]  flex justify-center items-center     rounded-2xl">
           <RadialBlur />
           <p className="text-3xl font-semibold text-center">
