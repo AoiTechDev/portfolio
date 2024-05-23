@@ -13,14 +13,22 @@ const Bio = () => {
   const { t } = useTranslation();
 
   const locale = GetLocaleFromStorage();
-  console.log(locale)
+  console.log(locale);
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
       <div className="order-2 lg:order-1  flex-1 gap-10 flex h-full flex-col">
         <WobbleCard className=" h-full min-h-[180px] sm:min-h-[250px] bg-grid-white/[0.05]  flex justify-center items-center     rounded-2xl">
           <RadialBlur />
           <p className="text-2xl sm:text-3xl font-semibold text-balance text-start">
-            <GradientText text={t("about:enthusiast")} /> {t("about:tech")}{" "}
+            {locale === "en" ? (
+              <>
+                {t("about:tech")} <GradientText text={t("about:enthusiast")} />{" "}
+              </>
+            ) : (
+              <>
+                <GradientText text={t("about:enthusiast")} /> {t("about:tech")}
+              </>
+            )}{" "}
             {t("about:tect_passion")}
           </p>
         </WobbleCard>
