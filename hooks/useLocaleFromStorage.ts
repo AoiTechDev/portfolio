@@ -1,6 +1,5 @@
-"use client";
 import { useCookies } from "next-client-cookies";
-export function GetLocaleFromStorage() {
+export function useLocaleFromStorage() {
   const cookies = useCookies();
   const locale = cookies.get("NEXT_LOCALE");
 

@@ -7,7 +7,7 @@ import { CiMenuFries } from "react-icons/ci";
 import NavItem from "./common/NavItem";
 
 import LanguageChanger from "./LanguageChanger";
-import Socials from "./Socials";
+
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import { useDetectScroll } from "@/hooks/useDetectScroll";

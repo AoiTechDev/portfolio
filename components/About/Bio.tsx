@@ -7,13 +7,13 @@ import { useTranslation } from "react-i18next";
 import { Noise, WobbleCard } from "../ui/wobble-card";
 import RadialBlur from "../common/effects/radial-blur";
 import GradientText from "../common/effects/gradient-text";
-import { GetLocaleFromStorage } from "@/hooks/getLocaleFromStorage";
 import MotionComponent from "../common/motion/MotionComponent";
+import { useLocaleFromStorage } from "@/hooks/useLocaleFromStorage";
 
 const Bio = () => {
   const { t } = useTranslation();
 
-  const locale = GetLocaleFromStorage();
+  const locale =  useLocaleFromStorage();
   console.log(locale);
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
