@@ -18,14 +18,14 @@ const Arrow = () => {
         path.style.opacity = "1";
         path.style.strokeDasharray = String(length);
         path.style.strokeDashoffset = String(length);
-        path.style.animation = "draw 1s linear forwards";
+        path.style.animation = "draw 0.5s linear forwards";
       }
     }
   }, [isInView]);
 
   return (
     <svg
-      className="w-64 h-64 sm:w-96 sm:h-96 absolute -top-16 -right-10 sm:top-32 sm:right-16"
+      className="w-64 h-64 sm:w-96 sm:h-96 absolute -top-16 -right-10 sm:top-32 sm:right-16 "
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 800 800"
@@ -49,6 +49,7 @@ const Arrow = () => {
           ref={pathRef}
           d="M176.2177734375 245.37613677978516Q774.2177734375 -48.623863220214844 573.2177734375 642.3761367797852 "
           markerEnd="url(#SvgjsMarker1907)"
+          className="opacity-0"
         ></path>
       </g>
       <defs>
