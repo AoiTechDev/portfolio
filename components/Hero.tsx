@@ -13,6 +13,7 @@ import { useMediaQuery } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 import { Spotlight } from "./ui/Spotlight";
+import GradientText from "./common/effects/gradient-text";
 const Hero = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
@@ -61,9 +62,9 @@ const Hero = () => {
             transition={{
               delay: 0.2,
             }}
-            className="w-full text-center min-[1400px]:text-start bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text"
+            className="w-full text-center min-[1400px]:text-start bg-gradient-to-r "
           >
-            Front-end
+            <GradientText text="Front-end"/>
           </motion.span>{" "}
           <motion.span
             initial={{
@@ -77,9 +78,9 @@ const Hero = () => {
             transition={{
               delay: 0.2,
             }}
-            className="w-full text-center min-[1400px]:text-start bg-gradient-to-r from-purple-500 to-indigo-500 inline-block text-transparent bg-clip-text"
+            className="w-full text-center min-[1400px]:text-start"
           >
-            Developer
+          <GradientText text="Developer"/>
           </motion.span>
         </h1>
         <motion.p

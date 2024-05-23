@@ -38,13 +38,13 @@ const Bio = () => {
         >
           {t("about:bio")}
         </motion.p> */}
-        <WobbleCard className=" h-full min-h-[280px] bg-grid-white/[0.1]  flex justify-center items-center     rounded-2xl">
+        <WobbleCard className=" h-full min-h-[280px] bg-grid-white/[0.05]  flex justify-center items-center     rounded-2xl">
           <RadialBlur />
           <p className="text-3xl font-semibold text-center">
             Tech enthusiast with a passion for development
           </p>
         </WobbleCard>
-        <WobbleCard className=" h-full min-h-[280px] rounded-2xl flex justify-center items-center bg-grid-white/[0.1]">
+        <WobbleCard className=" h-full min-h-[280px] rounded-2xl relative flex justify-center items-center bg-grid-white/[0.05]">
           <RadialBlur />
           <p className="text-3xl font-semibold text-center">
             Tech enthusiast with a passion for development

@@ -27,11 +27,11 @@ const Cards = () => {
   });
   const { t } = useTranslation();
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]  bg-grid-white/[0.1] relative  z-0 mx-auto w-full ">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-[1400px]  relative  z-0 mx-auto w-full ">
       {/* <Glow className="sm:left-0 sm:-top-[200px] opacity-55 z-10 " /> */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black -z-10 bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <WobbleCard
-        containerClassName="col-span-1   lg:col-span-2 h-full  z-20 min-h-[300px] sm:min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1  bg-grid-white/[0.03] lg:col-span-2 h-full  z-20 min-h-[300px] sm:min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <motion.div
@@ -56,7 +56,7 @@ const Cards = () => {
           </p>
         </motion.div>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 relative z-20 min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 relative bg-grid-white/[0.05] z-20 min-h-[300px]">
         <motion.div
           initial={{
             opacity: 0,
@@ -78,7 +78,7 @@ const Cards = () => {
           </p>
         </motion.div>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 z-20 relative lg:col-span-3 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 z-20 relative lg:col-span-3 min-h-[500px] bg-grid-white/[0.05] lg:min-h-[600px] xl:min-h-[300px]">
         <motion.div
           initial={{
             opacity: 0,
