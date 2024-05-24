@@ -8,7 +8,7 @@ import NavItem from "./common/NavItem";
 
 import LanguageChanger from "./LanguageChanger";
 
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { Menu, MenuItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import { useDetectScroll } from "@/hooks/useDetectScroll";
 import { m } from "framer-motion";
@@ -21,9 +21,9 @@ const Navbar = ({ className }: { className?: string }) => {
 
   useEffect(() => {
     if (scrollDirection === "down") {
-      navRef.current?.classList.add("-translate-y-28");
+      navRef.current?.classList.add("-translate-y-40");
     } else {
-      navRef.current?.classList.remove("-translate-y-28");
+      navRef.current?.classList.remove("-translate-y-40");
     }
   }, [scrollDirection]);
 
@@ -53,37 +53,16 @@ const Navbar = ({ className }: { className?: string }) => {
     <div
       ref={navRef}
       className={cn(
-        "fixed top-6 inset-x-8 lg:inset-x-0 max-w-xl mx-auto z-50 duration-300",
+        "fixed top-2 sm:top-6 inset-x-2 sm:inset-x-8 lg:inset-x-0 max-w-xl mx-auto z-50 duration-300",
+
         className
       )}
     >
+      <LanguageChanger className="absolute -bottom-12 rounded-xl bg-[#1e1e1e] border-[1px] border-[#282828] px-4 py-2 left-[50%] -translate-x-1/2 flex justify-center items-center gap-4 text-white" />
       <Menu setActive={setActive}>
-        <LanguageChanger className="absolute top-3  left-2 flex justify-center items-center flex-col text-white" />
         {navLinks.map((link) => (
           <MenuItem key={link.id} href={link.href} item={link.item} />
         ))}
-        {/* <MenuItem
-          setActive={setActive}
-          active={null}
-          item={t("common:home")}
-        />
-        <MenuItem
-          setActive={setActive}
-          active={null}
-          item={t("common:about")}
-        />
-
-        <MenuItem
-          setActive={setActive}
-          active={null}
-          item={t("common:projects")}
-        />
-
-        <MenuItem
-          setActive={setActive}
-          active={null}
-          item={t("common:skills")}
-        /> */}
       </Menu>
     </div>
   );

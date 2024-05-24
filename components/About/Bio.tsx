@@ -12,9 +12,9 @@ import { useLocaleFromStorage } from "@/hooks/useLocaleFromStorage";
 
 const Bio = () => {
   const { t } = useTranslation();
-
-  const locale =  useLocaleFromStorage();
-  console.log(locale);
+  
+  
+  const locale = useLocaleFromStorage();
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
       <div className="order-2 lg:order-1  flex-1 gap-10 flex h-full flex-col">
@@ -49,7 +49,6 @@ const Bio = () => {
         </WobbleCard>
       </div>
       <div className="order-1 rounded-2xl overflow-hidden relative lg:order-2   flex justify-center items-center">
-      
         <MotionComponent className="absolute bottom-4 sm:bottom-10 left-4 sm:left-6">
           <p className="text-2xl sm:text-3xl  font-semibold  text-start  text-balance">
             {t("about:priority1")} <GradientText text={t("about:colab")} />{" "}

@@ -44,7 +44,7 @@ export default function LanguageChanger({ className }: { className?: string }) {
     <div className={cn("uppercase  ", className)}>
       {lang.map((lang, index) => (
         <span
-          className="cursor-pointer opacity-60 hover:opacity-30 duration-200"
+          className="cursor-pointer hover:opacity-60 duration-200"
           ref={(e) => {
             if (!langRefs.current[index]) {
               langRefs.current[index] = e;

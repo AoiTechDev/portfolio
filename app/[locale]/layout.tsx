@@ -37,7 +37,7 @@ const i18nNamespaces = [
   "footer",
   "aifred",
   "clearflow",
-  'contact'
+  "contact",
 ];
 
 export default async function RootLayout({
@@ -58,7 +58,7 @@ export default async function RootLayout({
       <html style={{ scrollBehavior: "smooth" }} lang={locale}>
         <body className={`${inter.className} bg-background`}>
           <Navbar />
-       
+
           {/* <div id="burger"></div>
           <div id="menu"></div> */}
 
