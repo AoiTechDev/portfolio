@@ -1,7 +1,16 @@
-import { useCookies } from "next-client-cookies";
+import { useEffect, useState } from "react";
+
 export function useLocaleFromStorage() {
-  const cookies = useCookies();
-  const locale = cookies.get("NEXT_LOCALE");
+  const [locale, setLocale] = useState<string | null | undefined>(null);
+
+  useEffect(() => {
+    const cookie = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("NEXT_LOCALE="))
+      ?.split("=")[1];
+
+    setLocale(cookie);
+  }, []);
 
   return locale;
 }

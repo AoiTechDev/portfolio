@@ -15,7 +15,9 @@ const Bio = () => {
   
   
   const locale = useLocaleFromStorage();
+
   return (
+    
     <div className="w-full flex flex-col lg:flex-row justify-center gap-10 items-center">
       <div className="order-2 lg:order-1  flex-1 gap-10 flex h-full flex-col">
         <WobbleCard className=" h-full min-h-[180px] sm:min-h-[240px] bg-grid-white/[0.05]  flex justify-start items-center     rounded-2xl">
