@@ -1,14 +1,11 @@
 "use client";
-import Image from "next/image";
-import React, { useRef } from "react";
 import codding from "@/assets/codding.png";
-import { motion, useInView } from "framer-motion";
+import { useLocaleFromStorage } from "@/hooks/useLocaleFromStorage";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { Noise, WobbleCard } from "../ui/wobble-card";
-import RadialBlur from "../common/effects/radial-blur";
 import GradientText from "../common/effects/gradient-text";
 import MotionComponent from "../common/motion/MotionComponent";
-import { useLocaleFromStorage } from "@/hooks/useLocaleFromStorage";
+import { WobbleCard } from "../ui/wobble-card";
 
 const Bio = () => {
   const { t } = useTranslation();

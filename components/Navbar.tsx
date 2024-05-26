@@ -1,17 +1,12 @@
 "use client";
-import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { CiMenuFries } from "react-icons/ci";
-import NavItem from "./common/NavItem";
 
 import LanguageChanger from "./LanguageChanger";
 
-import { Menu, MenuItem } from "./ui/navbar-menu";
-import { cn } from "@/lib/utils";
 import { useDetectScroll } from "@/hooks/useDetectScroll";
-import { m } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { Menu, MenuItem } from "./ui/navbar-menu";
 
 const Navbar = ({ className }: { className?: string }) => {
   const [active, setActive] = useState<string | null>(null);
