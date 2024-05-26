@@ -21,7 +21,7 @@ const Contact = () => {
         </h2>
       </MotionComponent>
       <MotionComponent>
-        <p className="opacity-60 text-center"> {t("contact:reach")}</p>
+        <p className="opacity-60 text-center text-balance"> {t("contact:reach")}</p>
       </MotionComponent>
       <MotionComponent>
         <a href="mailto:pawel.bornikowski@gmail.com" target="_blank">
