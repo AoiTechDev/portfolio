@@ -89,7 +89,7 @@ const Technologies = () => {
       <div className="wordcloud max-w-3xl mx-auto mt-10 w-full flex justify-center items-center">
         <Wordcloud
           words={words}
-          width={isSmallScreen ? 400 : 800}
+          width={isSmallScreen ? 360 : 800}
           height={isSmallScreen ? 400 : 600}
           fontSize={fontSizeSetter}
           font={"Impact"}
