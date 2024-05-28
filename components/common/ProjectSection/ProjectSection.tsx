@@ -53,9 +53,9 @@ const ProjectSection = ({
     once: true,
   });
   return (
-    <div ref={ref} className="w-full  flex gap-20 flex-col lg:flex-row">
+    <div ref={ref} className="w-full   flex gap-20 flex-col lg:flex-row">
       <div
-        className={`lg:flex-1 flex flex-col gap-8 justify-center items-start px-4 ${
+        className={`lg:flex-1 flex flex-col max-w-2xl mx-auto gap-8 justify-center items-start px-4 ${
           order === 1 ? "lg:order-1" : "lg:order-2"
         }`}
       >

@@ -1,26 +1,25 @@
 "use client";
-import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 import { SiTailwindcss } from "react-icons/si";
 
 import { TracingBeam } from "./ui/tracing-beam";
 
-import TechCard from "./common/TechCard";
-import { LogosTestingLibrary } from "./common/Icons/LogosTestingLibrary";
-import { SiAdobexd } from "react-icons/si";
-import TypeScript from "./common/Icons/Typescript";
-import JavaScript from "./common/Icons/Javascript";
-import CSS from "./common/Icons/Css3";
-import Sass from "./common/Icons/Sass";
-import PostgreSQL from "./common/Icons/Postgres";
-import Redis from "./common/Icons/Redis";
-import Next from "./common/Icons/Next";
-import ReactIcon from "./common/Icons/ReactIcon";
-import Jest from "./common/Icons/Jest";
-import Figma from "./common/Icons/Figma";
-import { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
+import { SiAdobexd } from "react-icons/si";
+import CSS from "./common/Icons/Css3";
+import Figma from "./common/Icons/Figma";
+import JavaScript from "./common/Icons/Javascript";
+import Jest from "./common/Icons/Jest";
+import { LogosTestingLibrary } from "./common/Icons/LogosTestingLibrary";
+import Next from "./common/Icons/Next";
+import PostgreSQL from "./common/Icons/Postgres";
+import ReactIcon from "./common/Icons/ReactIcon";
+import Redis from "./common/Icons/Redis";
+import Sass from "./common/Icons/Sass";
+import TypeScript from "./common/Icons/Typescript";
+import TechCard from "./common/TechCard";
 import Arrow from "./svg/arrow";
 const Technologies = () => {
   const ref = useRef(null);
@@ -32,9 +31,8 @@ const Technologies = () => {
   return (
     <section
       id="skills"
-      className="w-full max-w-7xl min-h-[300vh] mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32"
+      className="w-full max-w-7xl min-h-screen mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32"
     >
-      <Arrow/>
       <motion.h2
         initial={{
           opacity: 0,
@@ -47,12 +45,18 @@ const Technologies = () => {
           }
         }
         ref={ref}
-        className="text-center w-full font-semibold text-7xl relative lg:text-[140px] mb-36"
+        className="text-center w-full font-semibold text-6xl relative lg:text-[120px] "
       >
         {t("skills:header")}
-        
+        <Arrow />
       </motion.h2>
-      <div className="flex w-full justify-center items-start gap-8 relative">
+
+      <p className="text-balance text-center w-full max-w-3xl mx-auto">
+        I use various technologies to build my projects. Some of the my favorite
+        popular ones are:
+      </p>
+
+      {/* <div className="flex w-full justify-center items-start gap-8 relative">
         <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl pr-4">
           {" "}
           <TechCard
@@ -156,7 +160,7 @@ const Technologies = () => {
             ]}
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

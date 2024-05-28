@@ -48,7 +48,7 @@ const Projects = () => {
       <Glow className="sm:left-1/2 sm:top-1/2 left-1/2 top-1/2" />
       <h2
         ref={ref}
-        className="text-6xl bg-grid-white/[0.05] relative lg:text-[100px] font-semibold z-0 p-2 gap-4 lg:gap-0"
+        className="text-[4rem] leading-tight bg-grid-white/[0.05] relative lg:text-[110px] font-semibold z-0 p-2 gap-4 lg:gap-0"
       >
         <RadialBlur className="z-10"/>
         <div className="absolute  left-1/2  z-20 -translate-x-1/2 w-4/5 md:h-[400px] rounded-[100%]  bg-gradient-to-r from-purple-800 to-indigo-700 opacity-40 blur-[90px] pointer-events-none h-1/2"></div>
