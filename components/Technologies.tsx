@@ -83,7 +83,7 @@ const Technologies = () => {
 
         <p className="text-balance text-center w-full max-w-3xl mx-auto mt-10">
           I use <GradientText text="various technologies" /> to build my
-          projects. Some of my favorite ones are:
+          projects.
         </p>
       </div>
       <div className="wordcloud max-w-3xl mx-auto mt-10 w-full flex justify-center items-center">
