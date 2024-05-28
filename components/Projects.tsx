@@ -43,7 +43,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full max-w-7xl relative z-0 min-h-screen mx-auto  sm:pt-24 text-white mt-80"
+      className="w-full max-w-7xl relative z-0 min-h-screen mx-auto  sm:pt-24 text-white mt-80 sm:px-4"
     >
       <Glow className="sm:left-1/2 sm:top-1/2 left-1/2 top-1/2" />
       <h2
