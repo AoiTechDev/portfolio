@@ -8,7 +8,8 @@ import RadialBlur from "./common/effects/radial-blur";
 import { Text } from "@visx/text";
 import { scaleLog } from "@visx/scale";
 import Wordcloud from "@visx/wordcloud/lib/Wordcloud";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
+import useMediaQuery from "@/hooks/useMediaQuery";
+// import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export interface WordData {
   text: string;
@@ -54,7 +55,7 @@ const Technologies = () => {
   });
   const { t } = useTranslation();
 
-  const isSmallDevice = useMediaQuery({ query: 768 });
+  const isSmallScreen = useMediaQuery(768) 
   return (
     <section
       id="skills"
@@ -85,11 +86,11 @@ const Technologies = () => {
           projects. Some of my favorite ones are:
         </p>
       </div>
-      <div className="wordcloud max-w-3xl mx-auto mt-10 w-full">
+      <div className="wordcloud max-w-3xl mx-auto mt-10 w-full flex justify-center items-center">
         <Wordcloud
           words={words}
-          width={isSmallDevice ? 400 : 800}
-          height={isSmallDevice ? 400 : 600}
+          width={isSmallScreen ? 400 : 800}
+          height={isSmallScreen ? 400 : 600}
           fontSize={fontSizeSetter}
           font={"Impact"}
           padding={2}

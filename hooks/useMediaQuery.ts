@@ -1,13 +1,24 @@
-import React, { useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-export function useMediaQuery({ query }: { query?: number }) {
-  const [media, setMedia] = React.useState<boolean>(false);
+function useMediaQuery(width: number) {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia(`(max-width: ${query}px)`);
-    setMedia(mediaQuery.matches);
-  });
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < width);
+    };
 
+    window.addEventListener('resize', handleResize);
 
-  return media;
+    // Check the size initially
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [width]);
+
+  return isSmallScreen;
 }
+
+export default useMediaQuery;

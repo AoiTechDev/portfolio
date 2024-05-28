@@ -61,7 +61,7 @@ const ProjectSection = ({
       >
         {back}
         <MotionComponent inView={isInView} delay={0}>
-          <h3 className="text-6xl lg:text-8xl">{title}</h3>
+          <h3 className="text-5xl lg:text-8xl">{title}</h3>
         </MotionComponent>
         <motion.span
           initial={{
@@ -79,8 +79,11 @@ const ProjectSection = ({
         ></motion.span>
 
         <MotionComponent inView={isInView} delay={0.2}>
-          <div className="flex w-full justify-between">
-            <ul className="flex gap-4">
+          <div className="flex w-full justify-between items-center">
+            {/* {stack.map((icon, index) => (
+              <span key={index}>{icon}</span>
+            ))} */}
+            <ul className="flex gap-2 text-sm sm:text-md">
               {stack
                 .join(" | ")
                 .split(" ")
