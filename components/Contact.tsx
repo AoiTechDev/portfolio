@@ -5,6 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import MotionComponent from "./common/motion/MotionComponent";
 import RadialBlur from "./common/effects/radial-blur";
+import GradientText from "./common/effects/gradient-text";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -25,7 +26,7 @@ const Contact = () => {
       <MotionComponent>
         <p className="opacity-70 text-center text-balance">
           {" "}
-          {t("contact:reach")}
+          {t("contact:reach")} <GradientText text={t("contact:achive")} />
         </p>
       </MotionComponent>
       <MotionComponent>
