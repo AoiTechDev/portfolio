@@ -21,6 +21,8 @@ import Sass from "./common/Icons/Sass";
 import TypeScript from "./common/Icons/Typescript";
 import TechCard from "./common/TechCard";
 import Arrow from "./svg/arrow";
+import RadialBlur from "./common/effects/radial-blur";
+import GradientText from "./common/effects/gradient-text";
 const Technologies = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -31,31 +33,33 @@ const Technologies = () => {
   return (
     <section
       id="skills"
-      className="w-full max-w-7xl min-h-screen mx-auto flex flex-col justify-center items-start gap-8 relative sm:pt-24 text-white mt-32"
+      className="w-full max-w-7xl min-h-screen mx-auto relative sm:pt-24 text-white mt-32"
     >
-      <motion.h2
-        initial={{
-          opacity: 0,
-          y: 100,
-        }}
-        animate={
-          isInView && {
-            opacity: 1,
-            y: 0,
+      <div className="relative bg-grid-white/[0.05] py-8">
+        <RadialBlur/>
+        <motion.h2
+          initial={{
+            opacity: 0,
+            y: 100,
+          }}
+          animate={
+            isInView && {
+              opacity: 1,
+              y: 0,
+            }
           }
-        }
-        ref={ref}
-        className="text-center w-full font-semibold text-6xl relative lg:text-[120px] "
-      >
+          ref={ref}
+          className="text-center w-full font-semibold text-6xl relative lg:text-[120px] "
+        >
         {t("skills:header")}
-        <Arrow />
-      </motion.h2>
+          {/* <Arrow /> */}
+        </motion.h2>
 
-      <p className="text-balance text-center w-full max-w-3xl mx-auto">
-        I use various technologies to build my projects. Some of the my favorite
-        popular ones are:
-      </p>
-
+        <p className="text-balance text-center w-full max-w-3xl mx-auto mt-10">
+          I use <GradientText text="various technologies"/> to build my projects. Some of my favorite
+          ones are:
+        </p>
+      </div>
       {/* <div className="flex w-full justify-center items-start gap-8 relative">
         <div className="sm:order-1 order-2 flex justify-center flex-col items-center text-6xl pr-4">
           {" "}

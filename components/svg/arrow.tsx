@@ -25,7 +25,7 @@ const Arrow = () => {
 
   return (
     <svg
-      className="w-64 h-64 sm:w-96 sm:h-96 absolute -top-16 -right-10 sm:top-32 sm:right-16 "
+      className="w-64 h-64 sm:w-96 sm:h-96 absolute top-0 right-0"
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 800 800"
