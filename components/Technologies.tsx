@@ -35,7 +35,7 @@ const Technologies = () => {
       id="skills"
       className="w-full max-w-7xl min-h-screen mx-auto relative sm:pt-24 text-white mt-32"
     >
-      <div className="relative bg-grid-white/[0.05] py-8">
+      <div className="relative max-w-3xl mx-auto bg-grid-white/[0.05] py-8">
         <RadialBlur/>
         <motion.h2
           initial={{
@@ -49,7 +49,7 @@ const Technologies = () => {
             }
           }
           ref={ref}
-          className="text-center w-full font-semibold text-6xl relative lg:text-[120px] "
+          className="text-center  w-full font-semibold text-6xl relative lg:text-[120px] "
         >
         {t("skills:header")}
           {/* <Arrow /> */}
