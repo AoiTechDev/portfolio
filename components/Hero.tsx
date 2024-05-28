@@ -11,7 +11,7 @@ import programming from "@/assets/programming.svg";
 import Glow from "./common/effects/Glow";
 import { useMediaQuery } from "@mui/material";
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { Spotlight } from "./ui/Spotlight";
 import GradientText from "./common/effects/gradient-text";
 const Hero = () => {

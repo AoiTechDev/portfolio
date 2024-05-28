@@ -48,7 +48,7 @@ const Navbar = ({ className }: { className?: string }) => {
     <div
       ref={navRef}
       className={cn(
-        "fixed top-2 sm:top-6 inset-x-2 sm:inset-x-8 lg:inset-x-0 max-w-xl mx-auto z-50 duration-300",
+        "fixed top-2 sm:top-6 inset-x-2 sm:inset-x-8 lg:inset-x-12 max-w-lg mx-auto z-50 duration-200",
 
         className
       )}

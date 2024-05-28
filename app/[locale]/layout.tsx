@@ -14,7 +14,7 @@ const inter = Poppins({
 export const metadata: Metadata = {
   title: "Paweł Bornikowski | Front-end Developer",
   keywords: ["Paweł Bornikowski", "Front-end", "Developer"],
-  description:
+  description:  
     "Front-end developer with 2 years of experience and strong passion for creating interfaces.",
   authors: [
     {
