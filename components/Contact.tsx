@@ -31,7 +31,7 @@ const Contact = () => {
       </MotionComponent>
       <MotionComponent>
         <a href="mailto:pawel.bornikowski@gmail.com" target="_blank">
-          <button className="py-4 px-8 rounded-xl bg-transparent flex gap-4 border-[#282828] border-[1px] justify-center relative items-center z-0 ">
+          <button className="py-4 px-8 rounded-xl bg-transparent flex gap-4 border-[#282828] border-[1px] justify-center relative items-center z-0 contact_button">
             <span className="absolute   opacity-40 top-0 w-full h-full -z-10 bg-gradient-to-r from-[#1e1e1e] to-[#282828] "></span>
             {t("contact:contact")} <MdArrowOutward className="text-xl" />
           </button>
