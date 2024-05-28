@@ -22,10 +22,11 @@ const totoAfricaLyrics =
 const colors = ["#7C00EA", "#6366f1", "#a855f7"];
 
 const Technologies = () => {
+  const isSmallScreen = useMediaQuery(768) 
   function wordFreq(text: string): WordData[] {
     const words: string[] = text.replace(/\./g, "").split(/\s/);
     const freqMap: Record<string, number> = {};
-
+    
     for (const w of words) {
       if (!freqMap[w]) freqMap[w] = 0;
       freqMap[w] += 1;
@@ -43,7 +44,7 @@ const Technologies = () => {
       Math.min(...words.map((w) => w.value)),
       Math.max(...words.map((w) => w.value)),
     ],
-    range: [10, 100],
+    range: isSmallScreen ? [10, 70] : [10, 100],
   });
   const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
 
@@ -55,7 +56,6 @@ const Technologies = () => {
   });
   const { t } = useTranslation();
 
-  const isSmallScreen = useMediaQuery(768) 
   return (
     <section
       id="skills"
