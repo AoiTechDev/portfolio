@@ -11,10 +11,10 @@ const inter = Poppins({
   weight: ["200", "100", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
+export const meta = {
   title: "Paweł Bornikowski | Front-end Developer",
-  keywords: ["Paweł Bornikowski", "Front-end", "Developer"],
-  description:  
+  favicon: "/favicon.ico",
+  description:
     "Front-end developer with 2 years of experience and strong passion for creating interfaces.",
   authors: [
     {
@@ -23,6 +23,35 @@ export const metadata: Metadata = {
     },
   ],
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: meta.title,
+    description: meta.description,
+    referrer: "origin-when-cross-origin",
+    keywords: [
+      "Paweł",
+      "Bornikowski",
+      "Front-end",
+      "Developer",
+      "Next.js",
+      "TailwindCSS",
+      "React",
+      "Typescript",
+      "Web Development",
+      "Front-end Developer",
+    ],
+    authors: [
+      {
+        name: "Paweł Bornikowski",
+        url: "https://www.linkedin.com/in/pbornikowski/",
+      },
+    ],
+    creator: "Paweł Bornikowski",
+    publisher: "Paweł Bornikowski",
+    
+  };
+}
 
 const i18nNamespaces = [
   "Home",
