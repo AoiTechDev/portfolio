@@ -22,11 +22,11 @@ const totoAfricaLyrics =
 const colors = ["#7C00EA", "#6366f1", "#a855f7"];
 
 const Technologies = () => {
-  const isSmallScreen = useMediaQuery(768) 
+  const isSmallScreen = useMediaQuery(768);
   function wordFreq(text: string): WordData[] {
     const words: string[] = text.replace(/\./g, "").split(/\s/);
     const freqMap: Record<string, number> = {};
-    
+
     for (const w of words) {
       if (!freqMap[w]) freqMap[w] = 0;
       freqMap[w] += 1;
@@ -82,8 +82,8 @@ const Technologies = () => {
         </motion.h2>
 
         <p className="text-balance text-center w-full max-w-3xl mx-auto mt-10">
-          I use <GradientText text="various technologies" /> to build my
-          projects.
+          {t("skills:use")} <GradientText text={t("skills:various")} />{" "}
+          {t("skills:build")}
         </p>
       </div>
       <div className="wordcloud max-w-3xl mx-auto mt-10 w-full flex justify-center items-center">
