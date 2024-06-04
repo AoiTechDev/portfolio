@@ -9,6 +9,7 @@ import {
   useInView,
   VariantLabels,
 } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const MotionComponent = ({
   children,
@@ -16,7 +17,7 @@ const MotionComponent = ({
   margin,
   initial,
   animate,
-  transition
+  transition,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -31,26 +32,26 @@ const MotionComponent = ({
     once: true,
   });
   return (
-    <motion.div
-      className={className}
-      initial={
-        initial || {
-          opacity: 0,
-          y: 50,
+    <div className={cn("", className)} ref={containerRef}>
+      <motion.div
+        initial={
+          initial || {
+            opacity: 0,
+            y: 100,
+          }
         }
-      }
-      animate={
-        animate ||
-        (containerIsInView && {
-          opacity: 1,
-          y: 0,
-        })
-      }
-      transition={transition}
-      ref={containerRef}
-    >
-      {children}
-    </motion.div>
+        animate={
+          animate ||
+          (containerIsInView && {
+            opacity: 1,
+            y: 0,
+          })
+        }
+        transition={transition}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 };
 

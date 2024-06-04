@@ -1,25 +1,21 @@
 "use client";
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
 
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { scaleLog } from "@visx/scale";
+import { Text } from "@visx/text";
+import Wordcloud from "@visx/wordcloud/lib/Wordcloud";
 import { useTranslation } from "react-i18next";
 import GradientText from "./common/effects/gradient-text";
 import RadialBlur from "./common/effects/radial-blur";
-import { Text } from "@visx/text";
-import { scaleLog } from "@visx/scale";
-import Wordcloud from "@visx/wordcloud/lib/Wordcloud";
-import useMediaQuery from "@/hooks/useMediaQuery";
-// import { useMediaQuery } from "@/hooks/useMediaQuery";
+import MotionComponent from "./common/motion/MotionComponent";
+import { colors, totoAfricaLyrics } from "@/constants/words";
 
 export interface WordData {
   text: string;
   value: number;
 }
 
-const totoAfricaLyrics =
-  "Next.js Next.js Next.js Next.js Next.js Typescript Typescript Typescript Typescript React React React React React Javascript Javascript Javascript  TailwindCSS TailwindCSS TailwindCSS TailwindCSS CSS CSS HTML HTML Express.js Node.js Jest Jest PostgreSQL PostgreSQL Redis Sanity Figma Figma Figma AdobeXD";
 
-const colors = ["#7C00EA", "#6366f1", "#a855f7"];
 
 const Technologies = () => {
   const isSmallScreen = useMediaQuery(768);
@@ -49,11 +45,7 @@ const Technologies = () => {
   const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
 
   const fixedValueGenerator = () => 0.5;
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    margin: "-100px",
-    once: true,
-  });
+
   const { t } = useTranslation();
 
   return (
@@ -63,32 +55,25 @@ const Technologies = () => {
     >
       <div className="relative max-w-3xl mx-auto bg-grid-white/[0.05] py-8">
         <RadialBlur />
-        <motion.h2
-          initial={{
-            opacity: 0,
-            y: 100,
-          }}
-          animate={
-            isInView && {
-              opacity: 1,
-              y: 0,
-            }
-          }
-          ref={ref}
-          className="text-center  w-full font-semibold text-6xl relative lg:text-[120px]"
-        >
-          {t("skills:header")}
-          {/* <Arrow /> */}
-        </motion.h2>
 
-        <p className="text-balance text-center w-full max-w-3xl mx-auto mt-10 brightness-110">
-          {t("skills:use")} <GradientText text={t("skills:various")} />{" "}
-          {t("skills:build")}
-        </p>
+        <MotionComponent>
+          <h2 className="text-center  w-full font-semibold text-6xl relative lg:text-[120px]">
+            {t("skills:header")}
+            {/* <Arrow /> */}
+          </h2>
+        </MotionComponent>
+
+        <MotionComponent className="mt-10">
+          <p className="text-balance text-center w-full max-w-2xl mx-auto brightness-110 px-4">
+            {t("skills:use")} <GradientText text={t("skills:various")} />{" "}
+            {t("skills:build")}
+          </p>
+        </MotionComponent>
       </div>
-      <div className="wordcloud max-w-5xl mx-auto mt-10 w-full flex justify-center bg-grid-white/[0.1] items-center relative">
-        <RadialBlur />
-        <RadialBlur/>
+      <div className="wordcloud max-w-5xl mx-auto mt-10 w-full flex justify-center bg-grid-white/[0.1] items-center relative z-0">
+        <RadialBlur className="z-20" />
+        <RadialBlur className="z-20" />
+
         <Wordcloud
           words={words}
           width={isSmallScreen ? 360 : 1000}
@@ -99,12 +84,11 @@ const Technologies = () => {
           spiral="archimedean"
           rotate={0}
           random={fixedValueGenerator}
-          
         >
           {(cloudWords) =>
             cloudWords.map((w, i) => (
               <Text
-              className="brightness-150"
+                className="brightness-150"
                 key={w.text}
                 fill={colors[i % colors.length]}
                 textAnchor={"middle"}

@@ -14,6 +14,7 @@ import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "next-i18next";
 import { Spotlight } from "./ui/Spotlight";
 import GradientText from "./common/effects/gradient-text";
+import MotionComponent from "./common/motion/MotionComponent";
 const Hero = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
@@ -37,90 +38,54 @@ const Hero = () => {
       />
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <Glow className="top-3/4 left-1/2 z-20" />
-      <div className="min-[1400px]:flex-1 flex justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
-        <motion.p
-          initial={{
-            opacity: 0,
-            transform: "translateY(20px)",
-          }}
-          animate={{
-            opacity: 1,
-            transform: "translateY(0)",
-          }}
-          className="text-center min-[1400px]:text-start text-lg "
-        >
-          {t("home:greetings" || "Home:greetings")}
-        </motion.p>
-
+      <div className="min-[1400px]:flex-1 flex z-0 justify-center items-center min-[1400px]:justify-start min-[1400px]:items-start flex-col w-full min-[1400px]:max-w-2xl mx-auto  gap-10">
+        <MotionComponent className="z-10">
+          <p className="text-center min-[1400px]:text-start text-lg ">
+            {t("home:greetings" || "Home:greetings")}
+          </p>
+        </MotionComponent>
         <h1 className="text-6xl text-start flex flex-col font-bold justify-between gap-4 px-4 min-[1400px]:px-0">
-          <motion.span
-            initial={{
-              opacity: 0,
-              transform: "translateX(-60px)",
+          <MotionComponent
+            transition={{
+              delay: 0.1,
             }}
-            animate={{
-              opacity: 1,
-              transform: "translateY(0)",
-            }}
+          >
+            <span className="w-full text-center min-[1400px]:text-start bg-gradient-to-r ">
+              <GradientText text="Front-end" />
+            </span>
+          </MotionComponent>{" "}
+          <MotionComponent
             transition={{
               delay: 0.2,
             }}
-            className="w-full text-center min-[1400px]:text-start bg-gradient-to-r "
           >
-            <GradientText text="Front-end" />
-          </motion.span>{" "}
-          <motion.span
-            initial={{
-              opacity: 0,
-              transform: "translateX(60px)",
-            }}
-            animate={{
-              opacity: 1,
-              transform: "translateY(0)",
-            }}
-            transition={{
-              delay: 0.2,
-            }}
-            className="w-full text-center min-[1400px]:text-start"
-          >
-            <GradientText text="Developer" />
-          </motion.span>
+            <span className="w-full text-center min-[1400px]:text-start">
+              <GradientText text="Developer" />
+            </span>
+          </MotionComponent>
         </h1>
-        <motion.p
-          initial={{
-            opacity: 0,
-            transform: "translateY(20px)",
+        <MotionComponent
+          transition={{
+            delay: 0.3,
           }}
-          animate={{
-            opacity: 1,
-            transform: "translateY(0)",
-          }}
+        >
+          <p className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start">
+            {t("home:subheader" || "Home:subheader")}
+          </p>
+        </MotionComponent>
+        <MotionComponent
           transition={{
             delay: 0.4,
           }}
-          className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start"
+          className="w-full"
         >
-          {t("home:subheader" || "Home:subheader")}
-        </motion.p>
-        <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            delay: 0.6,
-          }}
-          className="flex z-40 justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl"
-        >
-          <FaReact />
-          <SiNextdotjs />
-          <BiLogoTypescript />
-          <SiTailwindcss />
-        </motion.div>
+          <div className="flex z-40 justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl">
+            <FaReact />
+            <SiNextdotjs />
+            <BiLogoTypescript />
+            <SiTailwindcss />
+          </div>
+        </MotionComponent>
       </div>
       <motion.div
         initial={{

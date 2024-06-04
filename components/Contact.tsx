@@ -24,7 +24,7 @@ const Contact = () => {
         </h2>
       </MotionComponent>
       <MotionComponent>
-        <p className="opacity-70 text-center text-balance">
+        <p className="opacity-85 text-center text-balance">
           {" "}
           {t("contact:reach")} <GradientText text={t("contact:achive")} />
         </p>
