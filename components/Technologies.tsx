@@ -44,7 +44,7 @@ const Technologies = () => {
       Math.min(...words.map((w) => w.value)),
       Math.max(...words.map((w) => w.value)),
     ],
-    range: isSmallScreen ? [10, 70] : [10, 100],
+    range: isSmallScreen ? [10, 70] : [10, 130],
   });
   const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
 
@@ -75,32 +75,36 @@ const Technologies = () => {
             }
           }
           ref={ref}
-          className="text-center  w-full font-semibold text-6xl relative lg:text-[120px] "
+          className="text-center  w-full font-semibold text-6xl relative lg:text-[120px]"
         >
           {t("skills:header")}
           {/* <Arrow /> */}
         </motion.h2>
 
-        <p className="text-balance text-center w-full max-w-3xl mx-auto mt-10">
+        <p className="text-balance text-center w-full max-w-3xl mx-auto mt-10 brightness-110">
           {t("skills:use")} <GradientText text={t("skills:various")} />{" "}
           {t("skills:build")}
         </p>
       </div>
-      <div className="wordcloud max-w-3xl mx-auto mt-10 w-full flex justify-center items-center">
+      <div className="wordcloud max-w-5xl mx-auto mt-10 w-full flex justify-center bg-grid-white/[0.1] items-center relative">
+        <RadialBlur />
+        <RadialBlur/>
         <Wordcloud
           words={words}
-          width={isSmallScreen ? 360 : 800}
-          height={isSmallScreen ? 400 : 600}
+          width={isSmallScreen ? 360 : 1000}
+          height={isSmallScreen ? 400 : 800}
           fontSize={fontSizeSetter}
           font={"Impact"}
           padding={2}
           spiral="archimedean"
           rotate={0}
           random={fixedValueGenerator}
+          
         >
           {(cloudWords) =>
             cloudWords.map((w, i) => (
               <Text
+              className="brightness-150"
                 key={w.text}
                 fill={colors[i % colors.length]}
                 textAnchor={"middle"}
