@@ -42,7 +42,8 @@
     "react-i18next": "^14.1.0",
     "react-icons": "^5.0.1",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vercel": "^34.2.5"
   },
   "devDependencies": {
     "@iconify/tailwind": "^1.0.1",
