@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <main
       id="home"
-      className="w-full max-w-[1600px] min-h-[100vh]  mx-auto bg-grid-white/[0.05]  text-white   flex min-[1400px]:flex-row flex-col antialiased    items-center relative mt-36 mb-48 min-[1400px]:mt-0 z-0 p-4 sm:p-8"
+      className="w-full max-w-[1600px] min-h-[100vh]  mx-auto bg-grid-white/[0.05]  text-white   flex min-[1400px]:flex-row flex-col antialiased    items-center relative mt-48 mb-48 min-[1400px]:mt-0 z-0 p-4 sm:p-8"
     >
       <Spotlight
         className="hidden lg:block -top-[600px] -left-[700px] opacity-50"
@@ -69,8 +69,9 @@ const Hero = () => {
             delay: 0.3,
           }}
         >
-          <p className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start">
+          <p className="text-balance text-center w-full max-w-2xl min-[1400px]:text-start text-lg">
             {t("home:subheader" || "Home:subheader")}
+      
           </p>
         </MotionComponent>
         <MotionComponent
