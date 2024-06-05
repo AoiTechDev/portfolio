@@ -32,26 +32,26 @@ const MotionComponent = ({
     once: true,
   });
   return (
-    <div className={cn("", className)} ref={containerRef}>
-      <motion.div
-        initial={
-          initial || {
-            opacity: 0,
-            y: 100,
-          }
+    <motion.div
+      initial={
+        initial || {
+          opacity: 0,
+          y: 100,
         }
-        animate={
-          animate ||
-          (containerIsInView && {
-            opacity: 1,
-            y: 0,
-          })
-        }
-        transition={transition}
-      >
-        {children}
-      </motion.div>
-    </div>
+      }
+      animate={
+        animate ||
+        (containerIsInView && {
+          opacity: 1,
+          y: 0,
+        })
+      }
+      transition={transition}
+      className={cn("", className)}
+      ref={containerRef}
+    >
+      {children}
+    </motion.div>
   );
 };
 

@@ -77,14 +77,12 @@ const Hero = () => {
           transition={{
             delay: 0.4,
           }}
-          className="w-full"
+          className="flex z-40 w-full max-w-3xl justify-around  text-5xl min-[1400px]:text-6xl min-[1400px]:justify-between"
         >
-          <div className="flex z-40 justify-around w-full max-w-3xl min-[1400px]:justify-start min-[1400px]:gap-32 text-5xl min-[1400px]:text-6xl">
-            <FaReact />
-            <SiNextdotjs />
-            <BiLogoTypescript />
-            <SiTailwindcss />
-          </div>
+          <FaReact />
+          <SiNextdotjs />
+          <BiLogoTypescript />
+          <SiTailwindcss />
         </MotionComponent>
       </div>
       <motion.div
