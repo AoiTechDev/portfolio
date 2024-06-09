@@ -11,9 +11,9 @@ const inter = Poppins({
   weight: ["200", "100", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const meta = {
+const meta: Metadata = {
   title: "Paweł Bornikowski | Front-end Developer",
-  favicon: "/favicon.ico",
+
   description:
     "Front-end developer with 2 years of experience and strong passion for creating interfaces.",
   authors: [
@@ -47,9 +47,9 @@ export async function generateMetadata(): Promise<Metadata> {
         url: "https://www.linkedin.com/in/pbornikowski/",
       },
     ],
+
     creator: "Paweł Bornikowski",
     publisher: "Paweł Bornikowski",
-    
   };
 }
 
