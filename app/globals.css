@@ -178,3 +178,9 @@
 .contact_button:hover::after {
   transform: translateX(15rem) translateY(-15rem);
 }
+
+.line_shadow {
+  -webkit-box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.5);
+}

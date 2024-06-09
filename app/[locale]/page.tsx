@@ -1,5 +1,6 @@
 import About from "@/components/About/About";
 import Contact from "@/components/Contact";
+import CurvedLine from "@/components/CurvedLine";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
@@ -11,6 +12,7 @@ export default async function Home() {
       <About />
       <Projects />
       <Technologies />
+      <CurvedLine/>
       <Contact />
     </div>
   );

@@ -15,8 +15,6 @@ export interface WordData {
   value: number;
 }
 
-
-
 const Technologies = () => {
   const isSmallScreen = useMediaQuery(768);
   function wordFreq(text: string): WordData[] {
@@ -51,7 +49,7 @@ const Technologies = () => {
   return (
     <section
       id="skills"
-      className="w-full max-w-7xl min-h-screen mx-auto relative sm:pt-24 text-white mt-32"
+      className="w-full max-w-7xl min-h-[80dvh] mx-auto relative sm:pt-24 text-white mt-32"
     >
       <div className="relative max-w-3xl mx-auto bg-grid-white/[0.05] py-8">
         <RadialBlur />
