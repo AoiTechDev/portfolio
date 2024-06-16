@@ -10,4 +10,5 @@ For now it is just MVP with miniamal info. I will develop this in time.
 - Tailwind CSS
 - i18n
 - Framer Motion
+- Vercel
 
